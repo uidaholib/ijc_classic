@@ -1,0 +1,53 @@
+/* UDMv4.5 */
+/***************************************************************\
+
+  ULTIMATE DROP DOWN MENU Version 4.5 by Brothercake
+  http://www.udm4.com/
+
+  This script may not be used or distributed without license
+
+\***************************************************************/
+
+/***************************************************************/
+/* Generated CSS - do not edit this directly                   */
+/***************************************************************/
+
+.udm,.udm li,.udm ul{margin:0;padding:0;list-style-type:none;}
+.udm{position:relative;left:0;top:0;z-index:20000;width:189px;cursor:default !important;border:none;text-align:left;}
+.udm{position:static;padding-left:1px;padding-top:0px;}
+.udm li{display:block;width:189px;position:static;}
+@media Screen,Projection{:root .udm/**/[class="udm"] li{position:relative;}}
+@media Screen,Projection{:root .udm/**/[class="udm"] ul li{position:relative;}}
+.udm li a{position:relative;display:block;}
+.udm a{margin-top:-1px;}
+.udm ul a{margin:0;}
+.udm ul li{margin-top:-0px;}
+.udm ul li:first-child{margin-top:0px;}
+.udm ul{background-image:none;background-color:#efede7;cursor:default !important;width:0;height:auto;border-width:1px;border-color:#efede7 #fff #fff #fff;border-style:solid;position:absolute;z-index:20100;padding:0px;}
+.udm ul li{cursor:default !important;width:100%;position:static;float:none;}
+.udm ul{display:none;visibility:hidden;}
+html/**/[xmlns] .udm u\l{display:block;visibility:visible;height:0;overflow:scroll;left:-10000px;}
+@media screen,projection{* html .udm ul {display:block;visibility:visible;height:0;overflow:scroll;top:-10000px;}}
+ul.udm/**/[class^="udm"] u\l{display:block;visibility:visible;height:0;overflow:visible;left:-1000em;}
+.udm a,.udm a:link,.udm a.nohref{background-image:none;background-color:#e8e2d3;cursor:pointer !important;z-index:1000;text-align:left;border-style:solid;border-color:#fff;padding-left:12px;padding-right:12px;padding-top:8px !important;padding-bottom:8px !important;text-decoration:none;color:#535353;border-width:1px;font-style:normal;font-family:verdana, arial, helvetica, sans-serif;font-weight:bold !important;}
+.udm a,.udm a.nohref{font-size:1em;}
+.udm li a,.udm li a:link,.udm li a.nohref,.udm li a:visited{letter-spacing:1px !important;}
+.udm li a:visited{background-image:none;background-color:#e8e2d3;border-width:1px;color:#535353;font-style:normal;border-style:solid;border-color:#fff;}
+.udm li a.udmR,.udm li a.udmY,.udm li a.udmR:visited,.udm li a.udmY:visited,.udm li a:hover,.udm li a:focus,.udm li a.nohref:hover,.udm li a.nohref:focus{font-style:normal;background-image:none;background-color:#efede7;text-decoration:none;color:#993300;border-color:#fff #fff #efede7 #fff;border-style:solid;border-width:1px;}
+* html .udm li a:active{font-style:normal;background-image:none;background-color:#efede7;text-decoration:none;color:#993300;border-color:#fff #fff #efede7 #fff;border-style:solid;border-width:1px;}
+.udm ul a,.udm ul a:link,.udm ul a.nohref{background-image:none;background-color:#efede7;text-align:left;border-width:0px;border-style:none;border-color:#fff;padding-left:20px;padding-right:20px;padding-top:3px !important;padding-bottom:3px !important;text-decoration:none;color:#535353;font-style:normal;font-size:0.8em;font-family:verdana, arial, helvetica, sans-serif;font-weight:bold !important;}
+.udm ul li a:visited,* html .udm ul li a:visited{background-image:none;background-color:#efede7;color:#535353;font-style:normal;border-width:0px;border-style:none;border-color:#fff;}
+.udm ul li a.udmR,.udm ul li a.udmY,.udm ul li a.udmR:visited,.udm ul li a.udmY:visited,.udm ul li a:hover,.udm ul li a:focus,.udm ul li a.nohref:hover,.udm ul li a.nohref:focus,.udm ul li a:visited:hover{font-style:normal;background-image:none;background-color:#efede7;text-decoration:none;color:#993300;border-color:#fff;border-style:none;border-width:0px;background-repeat:no-repeat; background-position:0px 6px; background-image:url(http://www.uihome.uidaho.edu/uihome/images/2007menuitems.gif) !important;}
+* html .udm ul li a:active{font-style:normal;background-image:none;background-color:#efede7;text-decoration:none;color:#993300;border-color:#fff;border-style:none;border-width:0px;background-repeat:no-repeat; background-position:0px 6px; background-image:url(http://www.uidaho.edu/images/2007menuitems.gif) !important;}
+.udm a.nohref,.udm ul a.nohref{cursor:default !important;}
+.udm h3,.udm h4,.udm h5,.udm h6{display:block;background:none;margin:0;padding:0;border:none;font-size:1em;font-weight:normal;text-decoration:none;}
+.udm h1,.udm h2,.udm h3,.udm h4,.udm h5,.udm h6{width:100%;}
+@media screen,projection{* html .udm li{display:inline;}}
+@media screen,projection{* html .udm li,* html .udm ul li{display/**/:block;float/**/:left;}}
+ul[class$="udm"].udm li,ul[class$="udm"].udm ul li{display:block;float:left;}
+ul[class$="udm"].udm:not([class="xxx"]) li{float:none;}
+ul[class$="udm"].udm:not([class="xxx"]) ul li{float:none;}
+@media all and (min-width:0px){ul[class$="udm"].udm li{float:none;}}
+@media all and (min-width:0px){ul[class$="udm"].udm ul li{float:none;}}
+select{visibility:visible;}
+.udm .udmC{position:absolute;left:0;top:0;z-index:20020;width:auto;height:auto;filter:alpha(opacity=0);}

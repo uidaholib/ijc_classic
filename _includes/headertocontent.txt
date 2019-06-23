@@ -1,0 +1,164 @@
+  <div class="headertop container" id="top" >
+    <div class="col-xs-1 col-sm-2 col-md-3 col-lg-4" style="padding-left:0px;">
+      <p class="hidden-sm hidden-xs" id="uihome"> <a href="http://www.uidaho.edu">University of Idaho</a></p>
+      <p class="hidden-lg hidden-md visible-sm visible-xs" id="uihome"> <a href="http://www.uidaho.edu">UI</a></p>
+    </div>
+    <div class="col-sm-6 col-md-5  col-lg-5 hidden-xs" >
+      <ul class="nav nav-pills radiusless" id="dash">
+        <li class="hidden-sm"><a  href="https://www.lib.uidaho.edu/undergrad.html" title="Search dashboard for Undergraduates">Undergraduates</a> </li>
+        <li class="hidden-md hidden-lg"><a  href="https://www.lib.uidaho.edu/grad.html" title="Search dashboard for Undergraduates">Undergrads</a> </li>
+        <li class="hidden-sm"><a  href="https://www.lib.uidaho.edu/grad.html" title="Search dashboard for Graduate Students">Graduate Students</a> </li>
+        <li class="hidden-md hidden-lg" title="Search dashboard for Graduate Students"><a  href="https://www.lib.uidaho.edu/grad.html">Grad Students</a> </li>
+	      <li><a  href="https://www.lib.uidaho.edu/faculty.html" title="Search dashboard for Faculty">Faculty</a> </li>
+	    </ul>
+    </div>
+    <div class="col-xs-11 col-sm-4 col-md-4 col-lg-3 " style="padding:0px;">
+      <div class="col-xs-10 hidden-lg hidden-md hidden-sm" style="padding:0px;">
+        <p id="timedisp_sm" style="margin: 6px 0px 0px; text-align: center; font-size: smaller;">
+	      <script src="/js/hours.js"></script>
+        </p>
+      </div>
+      <ul class="nav nav-pills pull-right" id="right-pills" >
+        <li class="hidden-xs" ><a href="https://www.lib.uidaho.edu/giving/" class="moss-txt hidden-xs" title="Information regarding donations to the library"><span class="glyphicon glyphicon-gift"></span> </a> </li>
+        <li class="hidden-xs" ><a  href="https://www.lib.uidaho.edu/help/" title="Reference services help pages">Help</a></li>
+        <li class="hidden-xs" ><a href="https://www.lib.uidaho.edu/about/hours.html" class="hidden-xs" title="Library hours page">Hours</a></li>
+        <li class="hidden-xs" ><a  href="http://search.lib.uidaho.edu/primo_library/libweb/action/login.do?loginFn=signin&vid=UID&targetURL=http://search.lib.uidaho.edu/primo_library/libweb/action/myAccountMenu.do?vid=UID" title="Link to your Primo Account"><span class="word-hide">Account</span><span class="word-show">Account</span></a></li>
+        <li class="dropdown hidden-sm hidden-md hidden-lg" ><a href="#" class="dropdown-toggle "  data-toggle="dropdown"><span class="glyphicon glyphicon-list-alt"></span></a>
+          <ul class="dropdown-menu pull-right" id="my_dropdown" >
+            <li>
+		          <a  href="http://search.lib.uidaho.edu/primo_library/libweb/action/myAccountMenu.do?vid=UID">Account</a>
+		          <a  href="https://www.lib.uidaho.edu/help/">Help</a>
+		          <a  href="https://www.lib.uidaho.edu/about/hours.html">Hours</a>
+		          <hr style="margin:4px 0px ;" />
+		          <span style="text-align:center;font-style:italic;margin-top:16px;">Resources for:</span>
+              <a  href="https://www.lib.uidaho.edu/undergrad.html">Undergraduates</a>
+              <a  href="https://www.lib.uidaho.edu/grad.html">Graduate Students</a>
+              <a  href="https://www.lib.uidaho.edu/faculty.html">Faculty</a>
+	          </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+	<div class="headerwrapper" id="headerbanner" style="">
+	  <div class="container" style="padding:0px 15px;">
+      <div class="row">
+        <div class="col-sm-8 col-md-7">
+	        <a href="https://www.lib.uidaho.edu/index.html" class="uibrand" title="Go to Library Homepage"><img style="max-width: 100%;" src="/images/header-brand.png"></a>
+				</div>
+	      <div class="col-sm-4 col-md-3 hidden-xs" style="padding-right: 0px;" >
+	        <p id='timedisp'>
+          <script src="/js/hours.js"></script>
+          </p>
+	      </div>
+		    <div class="hours pull-right col-sm-2 col-md-2 hidden-sm hidden-xs" >
+	        <p class="pull-right">
+	        <a href="http://twitter.com/UofILibrary" title="Twitter Link" ><img style="height:16px; width:16px;" alt="University of Idaho Library Twitter Page Link" src="/images/twitter.jpg"></a>
+	        &nbsp;
+	        <a href="http://www.pinterest.com/uidaholibrary/" title="Pintrest Link"><img style="height:16px; width:16px;" alt="University of Idaho Library Twitter Page Link" src="/images/pintrest_16.png"></a>
+		      &nbsp;
+	        <a href="http://www.facebook.com/UofILibrary" title="Facebook Link"><img style="height:16px; width:16px;" alt="University of Idaho Library Facebook Fan Page Link" src="https://www.lib.uidaho.edu/images/facebook.gif"></a>
+	        &nbsp;
+	        <a href="http://uidahodigital.tumblr.com/" title="Tumblr Link"><img border="0" style="height:16px; width:16px;" alt="University of Idaho Library Facebook Fan Page Link" src="/images/tumblr.png"></a>
+		      </span>
+	        </p>
+			  </div>
+	    </div>
+	  </div>
+  </div>
+	<div id="maincontainer" style="">
+		<div class="container" >
+      <hr style="height:4px;border-color:#b18e5f; margin:3px 0px 10px; border-width:1px 0px; border-style:double;width:100%;">
+      <div class="hidden-md hidden-lg hidden-sm visible-xs row" style="padding:0px;" id="mobilenav" >
+        <div class="col-sm-3 col-xs-3 center">
+          <a title="Find resources such as articles, journals, databases, etc." href="https://www.lib.uidaho.edu/find/" class="small_navlink"><span class="glyphicon glyphicon-search"></span> 	 <br class="hidden-sm /">Find</a>
+        </div>
+        <div class="col-sm-3 col-xs-3 center" >
+			    <a title="Learn about Our Services" href="https://www.lib.uidaho.edu/services/" class="small_navlink" ><span class="glyphicon glyphicon-wrench"></span>	 <br class="hidden-sm /"> Services</a>
+        </div>
+        <div class="col-sm-3 col-xs-3 center">
+				  <a title="Discover Our Collections" href="https://www.lib.uidaho.edu/collections/" class="small_navlink"><span class="glyphicon glyphicon-th"></span> 	 <br class="hidden-sm /">Collections</a>
+        </div>
+        <div class="col-sm-3 col-xs-3 center">
+          <a title="Information About the Library" href="https://www.lib.uidaho.edu/about/" class="small_navlink"><span class="glyphicon glyphicon-map-marker "></span>	 <br class="hidden-sm /"> About</a>
+        </div>
+      </div>
+      <ul class="nav nav-justified  hidden-xs" id="mainnav">
+        <li class="" id="find_wid"><a title="Find resources such as articles, journals, databases, etc." href="https://www.lib.uidaho.edu/find/" ><span class="glyphicon glyphicon-search"></span> Find</a></li>
+        <li class=" " id="services_wid"><a title="Learn about Our Services" href="https://www.lib.uidaho.edu/services/"  ><span class="glyphicon glyphicon-wrench"></span> Services</a></li>
+        <li class=" " id="coll_wid"><a title="Discover Our Collections" href="https://www.lib.uidaho.edu/collections/" ><span class="glyphicon glyphicon-th"></span> Collections</a></li>
+        <li class="" id="about_wid"><a title="Information About the Library" href="https://www.lib.uidaho.edu/about/"><span class="glyphicon glyphicon-map-marker "></span> About</a></li>
+			  <li id="links_wid">
+          <div class="dropdown">
+            <a href="#" title="Quick Links" class="dropdown-toggle hidden-xs " data-toggle="dropdown"><span class="glyphicon glyphicon-fire"></span> <span class="word-hide">Quick</span> Links <b class="caret"></b></a>
+            <ul class="dropdown-menu multidrop-big pull-right " >
+					    <li>
+					      <ul class="multidrop "  id="find_det" >
+                  <li class="droptop" id="findmain"><a href="https://www.lib.uidaho.edu/find/">FIND</a></li>
+					        <li><a href="https://www.lib.uidaho.edu/find/articles.html">Articles</a></li>
+                  <li><a href="https://www.lib.uidaho.edu/find/books.html">Books</a></li>
+						      <li><a href="https://www.lib.uidaho.edu/find/dvds.html">DVDs</a></li>
+						      <li><a href="https://www.lib.uidaho.edu/find/journals.html">Journals</a></li>
+                  <li><a href="https://www.lib.uidaho.edu/find/geospatial/">Geospatial (GIS)</a></li>
+                  <li><a href="http://libguides.uidaho.edu/index.php">Research Guides</a></li>
+                  <li class="hidden-xs hidden-sm"><a href="https://www.lib.uidaho.edu/find/etds.html">Theses/Diss.</a></li>
+                  <li class="hidden-md hidden-lg"> <a href="https://www.lib.uidaho.edu/find/etds.html">ETDs</a></li>
+     					  </ul>
+					      <ul class="multidrop even "  id="services_det" >
+                  <li class="droptop" id="servicesmain"><a href="https://www.lib.uidaho.edu/services/">SERVICES</a></li>
+					        <li class="hidden-xs hidden-sm"><a href="https://www.lib.uidaho.edu/services/borrow/">Account Information</a></li>
+					        <li class="hidden-md hidden-lg"><a href="https://www.lib.uidaho.edu/services/borrow/">Account Info</a></li>
+					        <li><a href="https://www.lib.uidaho.edu/copyright/">Copyright</a></li>
+					        <li><a href="https://www.lib.uidaho.edu/services/data/">Data Services</a></li>
+					        <li><a href="https://www.lib.uidaho.edu/services/instruction/">Instruction Services</a></li>
+                  <li class="hidden-xs hidden-sm"><a href="https://www.lib.uidaho.edu/services/ill/index.html">Interlibrary Loan (ILL)</a></li>
+                  <li class="hidden-md hidden-lg"> <a href="https://www.lib.uidaho.edu/services/ill/index.html">Interlibrary Loan</a></li>
+                  <li><a href="https://www.lib.uidaho.edu/services/reserve/">Reserves</a></li>
+					        <li ><a href="https://www.lib.uidaho.edu/services/scholarly/">Scholarly Services</a></li>
+					      </ul>
+					  	  <ul class="multidrop "  id="coll_det" >
+                  <li class="droptop" id="collmain"><a href="https://www.lib.uidaho.edu/collections/">COLLECTIONS</a></li>
+					        <li><a href="https://www.lib.uidaho.edu/digital/">Digital Collections</a></li>
+                  <li class="hidden-xs hidden-sm"><a href="https://www.lib.uidaho.edu/find/govdocs/" >Government Docs</a></li>
+					        <li class="hidden-md hidden-lg"><a href="https://www.lib.uidaho.edu/find/govdocs/" >Gov. Docs</a></li>
+						      <li><a href="http://insideidaho.org/">INSIDE Idaho </a></li>
+						      <li><a href="http://www.ijc.uidaho.edu/" >Jazz Collections (IJC)</a></li>
+					        <li><a href="https://www.lib.uidaho.edu/find/maps/">Map Collections</a></li>
+					        <li><a href="https://www.lib.uidaho.edu/special-collections/">Special Collections</a></li>
+					        <li class="hidden-xs hidden-sm"><a href="http://vivo.nkn.uidaho.edu/vivo/" >VIVO (Campus Research)</a></li>
+					        <li class="hidden-md hidden-lg"><a href="http://vivo.nkn.uidaho.edu/vivo/" >VIVO</a></li>
+                </ul>  
+					      <ul class="multidrop even"  id="about_det">
+                  <li class="droptop" id="aboutmain"><a href="https://www.lib.uidaho.edu/about/index.html">ABOUT</a></li>
+					        <!--<li><a href="https://www.lib.uidaho.edu/about/welcome.html">Dean's Welcome</a></li>-->
+					        <li><a href="https://www.lib.uidaho.edu/about/departments.html">Departments</a></li>
+					        <li><a href="https://www.lib.uidaho.edu/about/directions.html">Directions</a></li>
+                  <li><a href="https://www.lib.uidaho.edu/about/directory.html">People</a></li>
+                  <li><a href="https://www.lib.uidaho.edu/about/policies.html">Policies</a></li>
+                  <li class="hidden-xs hidden-sm"><a href="https://www.lib.uidaho.edu/about/statistics.html">Reports and Statistics</a></li>
+                  <li class="hidden-md hidden-lg"><a href="https://www.lib.uidaho.edu/about/statistics.html">Reports and Stats</a></li>
+                  <li><a href="https://www.lib.uidaho.edu/about/liaisons.html">Subject Liaisons</a></li>
+                  <li><a href="https://www.lib.uidaho.edu/about/stratplan.html">Strategic Plan</a></li>
+					      </ul>
+					      <ul class="multidrop"  id="links_det" >
+                  <li class="droptop"><a href="https://www.lib.uidaho.edu/help/">HELP</a></li>
+					        <li><a href="https://www.lib.uidaho.edu/services/borrow/">Borrow/Renew</a></li>
+                  <li><a href="https://www.lib.uidaho.edu/about/maps.html">Floor Maps</a></li>
+					        <li><a href="https://www.lib.uidaho.edu/about/hours.html">Hours</a></li>
+					        <li class="hidden-xs hidden-sm hidden-md"><a href="https://www.lib.uidaho.edu/help/offcampus.html">Off-Campus Access</a></li>
+					        <li class=" hidden-lg"><a href="https://www.lib.uidaho.edu/help/offcampus.html">Off-Campus</a></li>
+					        <li class="hidden-xs hidden-sm hidden-md"><a href="https://www.lib.uidaho.edu/help/rap.html">Research Assistance</a></li>
+					        <li class="hidden-lg"><a href="https://www.lib.uidaho.edu/help/rap.html">Research Help</a></li>
+                  <li><a href="https://www.lib.uidaho.edu/find/request.html">Request a Book</a></li>
+                  <li><a href="https://www.lib.uidaho.edu/help/search.html">Site Search</a></li>
+                </ul>
+					    </li>
+            </ul>
+			    </div>
+			  </li>
+      </ul>
+      <br />
+    </div>
+  <div class="back_to_top" id="scrollToTop" style="display:none;">
+    <a href="#top" title="back to top" id="toplink"><span class="glyphicon glyphicon-chevron-up"></span></a>
+  </div>

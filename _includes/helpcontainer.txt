@@ -1,0 +1,24 @@
+  </div>
+</div>
+<div id="helpcontainer">
+  <div class="container ">
+    <div class="hidden-xs">
+      <a href="https://www.lib.uidaho.edu/help/" class=" col-md-offset-1 col-md-2 hidden-sm need "  ><em>Need Help?</em> </a>
+      <a href="https://www.lib.uidaho.edu/help/" class="hidden-md hidden-lg col-sm-1 need "  ><em>Help?</em> </a>
+      <a id="phonepop" type="button" class="btn btn-default stone col-md-1 col-sm-2"  data-container="body" data-toggle="popover" data-placement="top" data-content="Call us @ 208-885-6584" ><span class="glyphicon glyphicon-phone-alt"></span> Call</a> 
+      <a type="button" class="btn btn-default plum col-md-1 col-sm-2" href="mailto:libref@uidaho.edu"><span class="glyphicon glyphicon-envelope"></span> Email</a> 
+      <a id="textpop" type="button" class="btn btn-default berry col-md-1 col-sm-2"  data-container="body" data-toggle="popover" data-placement="top" data-content="Text us @ 208-449-0841" ><span class="glyphicon glyphicon-phone"></span> Text</a> 
+      <a type="button" class="btn btn-default moss col-md-1 col-sm-2" href="https://www.lib.uidaho.edu/help/rap.html"><span class="glyphicon glyphicon-user"></span> Meet</a> 
+    </div>
+    <div class="  hidden-lg hidden-md hidden-sm" style="text-align:center;background:none;padding:10px 0px;line-height:2em;">
+      <h4 style="color:#333;"><em>
+      <a href="help/" style="color:#436188">Need Help?</a> <br><br></em> Call: <a href="tel:208-885-6584">(208)885-6584</a> <br><br> Email: <a href="mailto:libref@uidaho.edu">libref@uidaho.edu</a> <br><br> Text: <a href="http://www.lib.uidaho.edu/help/chat.html"> (208)449-0841</a> <br><br> <a  type="button" class="btn btn-default stone  "  ><span class="glyphicon glyphicon-transfer"></span> Chat</a> </h4>
+    </div>
+    <div class="col-md-3 col-lg-2 col-sm-2 hidden-xs center " style="margin-top:10px;"> 
+      <div id='libchat_btn_widget'>
+      </div> 
+      <script> var libchat_cc0d30359c5e10c2862f5a3dc9596a22 = { iid:661, key:'112fd9c65d9ce06', width:240 }</script> 
+      <script type="text/javascript" src="//libanswers.uidaho.edu/load_chat.php?hash=cc0d30359c5e10c2862f5a3dc9596a22&options=libchat_cc0d30359c5e10c2862f5a3dc9596a22"></script>
+	  </div>
+  </div>
+</div>

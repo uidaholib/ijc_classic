@@ -1,0 +1,8 @@
+<div style="text-align:center;color:#666;" >
+  <h4><br/><em>Bringing the world to Idaho 
+	<br class="hidden-lg hidden-md hidden-sm visible-xs" /><br class="hidden-lg hidden-md hidden-sm visible-xs" />
+	... and Idaho to the world.</em> 
+	<br class="hidden-lg hidden-md visible-sm visible-xs" /><br class="hidden-lg hidden-md visible-sm visible-xs"/>
+	<a href="https://www.lib.uidaho.edu/giving/" class="moss-txt" title="Information regarding donations to the library">
+  <span class="glyphicon glyphicon-gift"></span> Give to the Library.</a> </h4>
+</div>

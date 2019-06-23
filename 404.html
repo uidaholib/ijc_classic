@@ -1,0 +1,115 @@
+---
+# IJC
+---
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>404 - University of Idaho Library</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap -->
+  <link href="/css/bootstrap.css" rel="stylesheet">
+  <link href="/css/uimods.css" rel="stylesheet" >
+  <style type="text/css">
+.btn-lg {
+	border-radius: 6px;
+}
+.find-button {
+	margin:.5%;
+}
+#aboutimage {
+	width:100%;
+	max-width:520px;
+}
+#aboutparagraph {
+	margin-top:15px;
+}
+  </style>
+  </head>
+  <body data-spy="scroll" data-target="#my-nav">
+  <!-- Global Navigation and Header --> 
+  {% include headertocontent.html %}
+  <!-- END Global Navigation and Header --> 
+  <!-- Page Content -->
+    <div class="container breadholder" id="breadcrumbdiv">
+      <ol class="breadcrumb">
+        <li><a href="http://www.lib.uidaho.edu/index.html ">Home</a></li>
+        <li class="active">404</li>
+      </ol>
+    </div>
+    <div class="container pagecontent" id="scrollnav">
+      <div class="row">
+        <div class="col-md-5 col-sm-6 col-xs-6 "> <br>
+          <br>
+          <img src="/images/missing_page.gif"> 
+        </div>
+        <div class="col-md-7 col-sm-6 col-xs-6"> <br>
+          <br>
+          <h3>The page you are trying to reach appears to be missing.</h3>
+          <p>We have recently re-designed our site, so this page may have been moved to another location.</p>
+          <p>Please feel free to <a href="mailto:libref@uidaho.edu">contact us</a> to let us know what went wrong.</p>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <div class="center" > 
+            <div class="hidden-xs">
+              <p>Search the library website:</p>
+              <script>
+                (function() {
+                  var cx = '003965900948510015874:5tg5vnqskwg';
+                  var gcse = document.createElement('script');
+                  gcse.type = 'text/javascript';
+                  gcse.async = true;
+                  gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+                      '//www.google.com/cse/cse.js?cx=' + cx;
+                  var s = document.getElementsByTagName('script')[0];
+                  s.parentNode.insertBefore(gcse, s);
+                })();
+              </script>
+              <gcse:search></gcse:search>
+              <br>
+            </div>
+            <div class="hidden-lg hidden-md hidden-sm center"> <br />
+              <a class="btn btn-default stone" href="/help/search.html" >Site Search</a> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Marketing Div --> 
+    {% include marketing.txt %} 
+    <!-- END Marketing--> 
+  </div>
+  <!-- Help Div --> 
+{% include helpcontainer.html %} 
+<!-- END Help Div --> 
+<!-- Footer Div --> 
+{% include footer.txt %} 
+<!-- /footer --> 
+<script src="https://code.jquery.com/jquery-latest.min.js"
+      type="text/javascript"></script> 
+<script src="/js/bootstrap.js"></script><script src="/js/scrolltotop.js"></script> 
+<script src="/js/affix.js"></script> 
+<script>
+      $(document).ready(function() { 
+      $("ul.nav-justified li:nth-child(4)").addClass('active');
+      });
+    </script> 
+<script src="/js/eventstracker.js"></script> 
+<!-- Google Analytics --> 
+<script type="text/javascript">
+      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script> 
+<script type="text/javascript">
+      var pageTracker = _gat._getTracker("UA-4564291-1");
+      pageTracker._initData();
+      pageTracker._trackPageview();
+    </script> 
+<!-- End Google Analytics --> 
+<!-- Final Javascript Div --> 
+{% include final.js %} 
+<!-- END Final Javascript-->
+</body>
+</html>

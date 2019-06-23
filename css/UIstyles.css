@@ -1,0 +1,4239 @@
+/* 
+   ABSOLUTE COLORS:
+   #000 = General body text color, "uihomenav" background color, "footer" hover link color
+   #b28b48 = Body background color (not seen because of image behind it)
+   #9b7924 = General link color
+   #fff = "uihomenav" text and active link color, "footer" text color, active link color in #globalnav (might have to manually change it for level 2/3/etc pages?
+   #d0d0d0 = "uihomenav" text/link color (not currently in revision 3 template)
+   #333333 = General p, li, header text color
+   
+   CHANGING COLORS
+   #904a2c (green) = Current "features" header color  
+   #cccccc (gray) = border-left for 'li' elements in #globalnav
+   #484848 (gray) = #globalnav text color and link color
+*/
+
+/* GENERAL PAGE POSITIONING */
+
+/* --- PAGE WRAPPERS --- */
+
+html { 
+ min-height: 100%; 
+ margin-bottom: 1px; 
+ }
+
+body {
+	margin:0; 
+	padding:0;
+	text-align:center;
+	font-family: verdana, arial, helvetica, sans-serif;
+	color:#000;
+	background:#e3d1b2 url(http://www.uidaho.edu/images/UIbody_bkgd.gif) top left repeat-x;
+	position:static; /* to make background of body stationary while rest of page scrolls */
+	font-size:76%;
+	}
+	
+#pagewrapper1 {/* for wrapping page and drop shadow on right - the following classes can be added to this div: .homePage, .portal,  */
+	width:868px;
+	margin:0 auto 0 auto;
+	text-align:left;
+	padding:0px;
+	line-height:1.1em;
+	position:relative;
+	z-index: 1;
+	}
+
+html>body #pagewrapper1 {/* hides drop shadow PNG from IE6 */
+	background:url(http://www.uidaho.edu/images/UIbase_rightshadow.png) top right repeat-y;
+	}
+
+#pagewrapper2 { /* page without drop shadow  - the following classes can be added to this div: .UImoss, .UIberry, .UIplum, .UIstone, .UIcopper */
+	width:863px;
+	margin-right:5px;
+	padding:0px;
+	background:url(http://www.uidaho.edu/images/UIbasic_bkgd.gif) top left repeat-y;
+	}
+
+#footerwrapper {
+	width:868px;
+	margin:0px auto 50px auto;
+	text-align:left;
+	padding:0px;
+	position:relative;
+	}
+
+
+
+/* --- BLACK UI NAVIGATION BAR FOR UI SUBPAGES --- */	
+	
+#uihomenav {
+	margin:0px;
+	padding:4px 30px 4px 22px;
+	/*border-left:1px solid #fff;
+	border-right:1px solid #e9e3da; /*---TOOK OUT BORDERS BECAUSE THEY WAS CAUSING BOX TO GET WIDER? THE BORDERS IN THE GLOBAL NAV BELOW IT WERE DISAPPEARING AND GLOBAL NAV BOTTOM BORDER WAS SHOWING 2PX GAP TO THE RIGHT OF IT*/
+	background-color:#000;
+	text-align:right;
+	color:#fff;
+	max-width:860px;
+	}
+				
+#uihomenavleft {
+	float:left;
+	width:300px; 
+	text-align:left; 
+	display:inline;
+	margin:0px;
+	}
+
+#uihomenav p {
+	color:#d0d0d0;
+	font-size:0.8em;
+	padding:0px;
+	margin:0px;
+	}
+		
+#uihomenav a:link {
+	color:#d0d0d0;
+	text-decoration:none;
+	}
+		
+#uihomenav a:visited {
+	color:#d0d0d0;
+	text-decoration:none;
+	}
+		
+#uihomenav a:hover {
+	color:#d0d0d0;
+	text-decoration:underline;
+	}
+		
+#uihomenav a:active {
+	color:#fff;
+	text-decoration:none;
+	}
+		
+
+/* --- TOP BANNER --- */
+
+#banner {
+	height:auto;
+	background: url(http://www.uidaho.edu/images/UIbanner_bkgd.gif) top left no-repeat;
+	}
+		
+#bannertop {
+	height:69px;
+	margin:0;
+	padding:0 30px 0 0;
+	text-align:right;
+	color:#000;
+	}
+	
+#bannermiddle {
+	height:auto;
+	}
+
+#bannerleft {
+	float:left;
+	width:276px;
+	text-align:left;
+	}
+
+#bannerright {
+	width:483px;
+	display:inline;
+	margin:0;
+	font-size:0.9em;
+	text-align:right;
+	}
+
+#bannerright .radiotext {
+	margin:0;
+	padding:0;
+	font-size:0.9em;
+	}
+
+#bannerright form {
+	margin:22px 0 0 10px;
+	padding:0;
+	float:right;
+	display:block;
+	}
+
+#bannerright form input.entersearch {
+	width:120px;
+	font:italic 0.9em arial, verdana, helvetica, sans-serif;
+	}
+	
+#bannerright p {
+	color:#9b7924;
+	font-size:0.8em;
+	padding:30px 0 0 0;
+	margin:0;
+	display:block;
+	text-transform:uppercase;
+	font-weight:bold;
+	}
+		
+#bannerright a:link {
+	color:#9b7924;
+	text-decoration:none;
+	}
+		
+#bannerright a:visited {
+	color:#9b7924;
+	text-decoration:none;
+	}
+		
+#bannerright a:hover {
+	color:#9b7924;
+	text-decoration:underline;
+	}
+		
+#bannerright a:active {
+	color:#9b7924;
+	text-decoration:underline;
+	}
+		
+#bannerbottom1 {
+	clear:both;
+	width:863px;
+	height:11px;
+	margin:0px;
+	padding:0px;
+	font-size:0; /* Gets rid of extra space in IE6 PC */
+	background: url(http://www.uidaho.edu/images/UIglobalnav_basebottom.gif) top left no-repeat; /* this image changes depending on color of global nav; there is also a version for the home page and the basic page (UIglobalnav_basebottom.gif, UIglobalnav_homebottom.gif, UIglobalnav_greenbottom.gif, etc.) */
+	}
+
+#bannerbottom2 {
+	width:863px;
+	height:11px;
+	margin:0px;
+	padding:0px;
+	}
+		
+		
+
+/* ------  GLOBAL NAVIGATION BAR (DEFAULT/HOMEPAGE) WITHIN BANNER --------------- */
+
+#globalnav1 {
+	clear:both;
+	margin:0 2px 0 2px;
+	padding:0;
+	text-align:center;
+	}
+		
+#globalnav2 {
+	width:100%; 
+	margin:0 0 0 0;  
+	padding:0 0 0 0;
+	background: url(http://www.uidaho.edu/images/UIglobalnav_basemiddle.gif) top left repeat-x;
+	}
+		
+html>body #globalnav2 { /* hides drop shadow PNG from IE6 */
+	background: url(http://www.uidaho.edu/images/UIglobalnav_basemiddle.png) top left repeat-x;
+	}
+		
+#globalnav3 {
+	margin:0;
+	padding:0 3px 0 22px;
+	background: url(http://www.uidaho.edu/images/UIglobalnav_basemiddle.gif) top right repeat-x;
+	max-width:810px;
+	position:relative;
+	z-index: 999;
+	/*word-wrap: break-word;*/
+	}
+		
+html>body #globalnav3 { /* hides drop shadow PNG from IE6 */
+	background: url(http://www.uidaho.edu/images/UIglobalnav_basemiddle.png) top right repeat-x;
+	position:relative;
+	z-index: 999;
+	}
+		
+ #globalnav3 ul.menubar {
+	margin:0 2px 0 2px;
+	height:25px;
+	padding:0 0 0 5px; /*had to remove 5px left padding between end piece and left li for "lefton" class*/
+	background: url(http://www.uidaho.edu/images/UIglobalnav_basemiddle.gif) top left repeat-x;
+	list-style-type: none;
+	max-width:810px;
+	}
+
+html>body #globalnav3 ul.menubar { /* hides drop shadow PNG from IE6 */
+	background: url(http://www.uidaho.edu/images/UIglobalnav_basemiddle.png) top left repeat-x;
+	}
+		
+#globalnav3 ul.menubar li.menubaritem {
+	float:left;
+	height:25px;
+	margin:0;
+	border-left:1px solid #cccccc;
+	font:bold 10px Verdana, Arial, Helvetica, sans-serif;
+	color: #484848;
+	text-transform:uppercase;
+  	}
+
+#globalnav3 ul.menubar li.menubaritem a.heha {
+	float:left;
+	height:17px;
+	margin:0;
+	padding:6px 12px 2px 12px;
+	font:bold 10px verdana, arial, helvetica, sans-serif;
+	color: #484848;
+	background: url(http://www.uihome.uidaho.edu/images/UIglobalnav_basemiddle.gif) top left repeat-x;
+	text-transform:uppercase;
+  	}
+
+#globalnav3 ul.menubar li.location a.heha {	
+	float:left;
+	height:17px;
+	margin:0;
+	padding:6px 12px 2px 12px;
+	font:bold 10px verdana, arial, helvetica, sans-serif;
+	color: #ffffff;
+	background: url(http://www.uihome.uidaho.edu/images/UIglobalnav_basemiddle.gif) top left repeat-x;
+	text-transform:uppercase;
+  	}
+
+#globalnav3 ul.menubar li.menubaritem a.heha:hover, #globalnav3 ul.menubar li.on a.heha {
+	float:left;
+	height:17px;
+	margin:0;
+	padding:6px 12px 2px 12px;
+	font:bold 10px verdana, arial, helvetica, sans-serif;
+	color: white;
+	background: url(http://www.uidaho.edu/images/UIglobalnav_middle_moss.gif) repeat-x;
+	text-transform:uppercase;
+} 
+
+#globalnav3 ul.menubar li.menubaritem ul li a {
+	color: white;
+}
+		
+		  
+html>body #globalnav3 ul.menubar li.menubaritem {
+	background: url(http://www.uidaho.edu/images/UIglobalnav_basemiddle.png) top left repeat-x;
+  	}	
+		
+#globalnav1 a:link {
+	color:#484848;
+	text-decoration:none;
+	}
+		
+#globalnav1 a:visited {
+	color:#484848;
+	text-decoration:none;
+	}
+		
+ #pagewrapper1 #pagewrapper2 #globalnav1 a:hover {
+	color:#ffffff;
+	text-decoration:underline;
+	}
+		
+#globalnav1 a:link:focus, #globalnav1 a:visited:focus {
+	color:#484848;
+	text-decoration:none;
+	}
+		
+#globalnav1 a:active {
+	color:#484848;
+	text-decoration:none;
+	}
+		
+#globalnav1 .on a:link {
+	color:#ffffff;
+	text-decoration:none;
+	}
+		
+#globalnav1 .on a:visited {
+	color:#ffffff;
+	text-decoration:none;
+	}
+		
+#pagewrapper1 #pagewrapper2 #globalnav1 .on a:hover {
+	color:#ffffff;
+	text-decoration:underline;
+	}
+		
+#globalnav1 .on a:link:focus, #globalnav1 .on a:visited:focus {
+	color:#ffffff;
+	text-decoration:none;
+	}
+		
+#globalnav1 .on a:active {
+	color:#ffffff;
+	text-decoration:none;
+	}
+	
+		
+/* ------  GLOBAL NAVIGATION BAR - Special styles for different color tabs  --------------- */
+
+#pagewrapper2 #globalnav3 menubar li.on {
+	border-left:1px solid #cccccc;
+	font:bold 10px verdana, arial, helvetica, sans-serif;
+	color:#ffffff;
+  	}
+		  
+#pagewrapper2.UImoss #globalnav3 ul.menubar li.on {
+	border-left:1px solid #cccccc;
+	font:bold 10px verdana, arial, helvetica, sans-serif;
+	color:#ffffff;
+	background: url(http://www.uidaho.edu/images/UIglobalnav_middle_moss.gif) top left repeat-x;
+  	}
+	
+	#pagewrapper2.UImoss #globalnav3 ul.menubar li.location {
+	border-left:1px solid #cccccc;
+	font:bold 10px verdana, arial, helvetica, sans-serif;
+	color:#ffffff;
+	background: url(http://www.uidaho.edu/images/UIglobalnav_middle_moss.gif) top left repeat-x;
+  	}
+		  
+html>body #pagewrapper2.UImoss #globalnav3 ul li.on {
+	background: url(http://www.uidaho.edu/images/UIglobalnav_middle_moss.png) top left repeat-x;
+  	}
+	
+	html>body #pagewrapper2.UImoss #globalnav3 ul li.location {
+	background: url(http://www.uidaho.edu/images/UIglobalnav_middle_moss.png) top left repeat-x;
+  	}
+		  
+#pagewrapper2.UIplum #globalnav3 ul li.on {
+	background: url(http://www.uidaho.edu/images/UIglobalnav_middle_plum.gif) top left repeat-x;
+  	}
+		  
+html>body #pagewrapper2.UIplum #globalnav3 ul li.on {
+	background: url(http://www.uidaho.edu/images/UIglobalnav_middle_plum.png) top left repeat-x;
+  	}
+		  
+#pagewrapper2.UIcopper #globalnav3 ul li.on {
+	background: url(http://www.uidaho.edu/images/UIglobalnav_middle_copper.gif) top left repeat-x;
+  	}
+		  
+html>body #pagewrapper2.UIcopper #globalnav3 ul li.on {
+	background: url(http://www.uidaho.edu/images/UIglobalnav_middle_copper.png) top left repeat-x;
+  	}
+		  
+#pagewrapper2.UIberry #globalnav3 ul li.on {
+	background: url(http://www.uidaho.edu/images/UIglobalnav_middle_berry.gif) top left repeat-x;
+  	}
+		  
+html>body #pagewrapper2.UIberry #globalnav3 ul li.on {
+	background: url(http://www.uidaho.edu/images/UIglobalnav_middle_berry.png) top left repeat-x;
+  	}
+		  
+#pagewrapper2.UIstone #globalnav3 ul li.on {
+	background: url(http://www.uidaho.edu/images/UIglobalnav_middle_stone.gif) top left repeat-x;
+  	}
+		  
+html>body #pagewrapper2.UIstone #globalnav3 ul li.on {
+	background: url(http://www.uidaho.edu/images/UIglobalnav_middle_stone.png) top left repeat-x;
+  	}
+		  
+#pagewrapper2.UIgold #globalnav3 ul li.on {
+	background: url(http://www.uidaho.edu/images/UIglobalnav_middle_gold.gif) top left repeat-x;
+  	}
+		  
+html>body #pagewrapper2.UIgold #globalnav3 ul li.on {
+	background: url(http://www.uidaho.edu/images/UIglobalnav_middle_gold.png) top left repeat-x;
+  	}
+		  
+#pagewrapper2.UIsilver #globalnav3 ul li.on {
+	background: url(http://www.uidaho.edu/images/UIglobalnav_middle_silver.gif) top left repeat-x;
+  	}
+		  
+html>body #pagewrapper2.UIsilver #globalnav3 ul li.on {
+	background: url(http://www.uidaho.edu/images/UIglobalnav_middle_silver.png) top left repeat-x;
+  	}
+		  
+/* ------  GLOBAL NAVIGATION BAR - MOSS - Special styles for different color tabs on ends --------------- */
+
+#pagewrapper2.UImoss #globalnav1.lefton #globalnav2 {
+	background: url(http://www.uidaho.edu/images/UIglobalnav_left_moss.gif) top left no-repeat;
+	}
+		
+html>body #pagewrapper2.UImoss #globalnav1.lefton #globalnav2 { /* hides drop shadow PNG from IE6 */
+	background: url(http://www.uidaho.edu/images/UIglobalnav_left_moss.png) top left no-repeat;
+	}
+		
+#pagewrapper2.UImoss #globalnav1.lefton #globalnav3 ul {
+	background: url(http://www.uidaho.edu/images/UIglobalnav_middlelft_moss.gif) top left no-repeat;
+	}
+		
+html>body #pagewrapper2.UImoss #globalnav1.lefton #globalnav3 ul {
+	background: url(http://www.uidaho.edu/images/UIglobalnav_middlelft_moss.png) top left no-repeat;
+	}
+		
+#pagewrapper2.UImoss #globalnav1.righton #globalnav3 {
+	background: url(http://www.uidaho.edu/images/UIglobalnav_right_moss.gif) top right no-repeat;
+	}
+		
+html>body #pagewrapper2.UImoss #globalnav1.righton #globalnav3 { /* hides drop shadow PNG from IE6 */
+	background: url(http://www.uidaho.edu/images/UIglobalnav_right_moss.png) top right no-repeat;
+	}
+		
+#pagewrapper2.UImoss #globalnav1.righton #globalnav3 ul {
+	background: url(http://www.uidaho.edu/images/UIglobalnav_middlert_moss.gif) top right no-repeat;
+	}
+		
+html>body #pagewrapper2.UImoss #globalnav1.righton #globalnav3 ul {
+	background: url(http://www.uidaho.edu/images/UIglobalnav_middlert_moss.png) top right no-repeat;
+	}
+		
+
+/* ------  GLOBAL NAVIGATION BAR - BERRY - Special styles for different color tabs on ends --------------- */
+
+#pagewrapper2.UIberry #globalnav1.lefton #globalnav2 {
+	background: url(http://www.uidaho.edu/images/UIglobalnav_left_berry.gif) top left no-repeat;
+	}
+		
+html>body #pagewrapper2.UIberry #globalnav1.lefton #globalnav2 { /* hides drop shadow PNG from IE6 */
+	background: url(http://www.uidaho.edu/images/UIglobalnav_left_berry.png) top left no-repeat;
+	}
+		
+#pagewrapper2.UIberry #globalnav1.lefton #globalnav3 ul {
+	background: url(http://www.uidaho.edu/images/UIglobalnav_middlelft_berry.gif) top left no-repeat;
+	}
+		
+html>body #pagewrapper2.UIberry #globalnav1.lefton #globalnav3 ul {
+	background: url(http://www.uidaho.edu/images/UIglobalnav_middlelft_berry.png) top left no-repeat;
+	}
+		
+#pagewrapper2.UIberry #globalnav1.righton #globalnav3 {
+	background: url(http://www.uidaho.edu/images/UIglobalnav_right_berry.gif) top right no-repeat;
+	}
+		
+html>body #pagewrapper2.UIberry #globalnav1.righton #globalnav3 { /* hides drop shadow PNG from IE6 */
+	background: url(http://www.uidaho.edu/images/UIglobalnav_right_berry.png) top right no-repeat;
+	}
+		
+#pagewrapper2.UIberry #globalnav1.righton #globalnav3 ul {
+	background: url(http://www.uidaho.edu/images/UIglobalnav_middlert_berry.gif) top right no-repeat;
+	}
+		
+html>body #pagewrapper2.UIberry #globalnav1.righton #globalnav3 ul {
+	background: url(http://www.uidaho.edu/images/UIglobalnav_middlert_berry.png) top right no-repeat;
+	}
+		
+
+/* ------  GLOBAL NAVIGATION BAR - COPPER - Special styles for different color tabs on ends --------------- */
+
+#pagewrapper2.UIcopper #globalnav1.lefton #globalnav2 {
+	background: url(http://www.uidaho.edu/images/UIglobalnav_left_copper.gif) top left no-repeat;
+	}
+		
+html>body #pagewrapper2.UIcopper #globalnav1.lefton #globalnav2 { /* hides drop shadow PNG from IE6 */
+	background: url(http://www.uidaho.edu/images/UIglobalnav_left_copper.png) top left no-repeat;
+	}
+		
+#pagewrapper2.UIcopper #globalnav1.lefton #globalnav3 ul {
+	background: url(http://www.uidaho.edu/images/UIglobalnav_middlelft_coppe.gif) top left no-repeat;
+	}
+		
+html>body #pagewrapper2.UIcopper #globalnav1.lefton #globalnav3 ul {
+	background: url(http://www.uidaho.edu/images/UIglobalnav_middlelft_coppe.png) top left no-repeat;
+	}
+		
+#pagewrapper2.UIcopper #globalnav1.righton #globalnav3 {
+	background: url(http://www.uidaho.edu/images/UIglobalnav_right_copper.gif) top right no-repeat;
+	}
+		
+html>body #pagewrapper2.UIcopper #globalnav1.righton #globalnav3 { /* hides drop shadow PNG from IE6 */
+	background: url(http://www.uidaho.edu/images/UIglobalnav_right_copper.png) top right no-repeat;
+	}
+		
+#pagewrapper2.UIcopper #globalnav1.righton #globalnav3 ul {
+	background: url(http://www.uidaho.edu/images/UIglobalnav_middlert_coppe.gif) top right no-repeat;
+	}
+		
+html>body #pagewrapper2.UIcopper #globalnav1.righton #globalnav3 ul {
+	background: url(http://www.uidaho.edu/images/UIglobalnav_middlert_coppe.png) top right no-repeat;
+	}
+		
+
+/* ------  GLOBAL NAVIGATION BAR - PLUM - Special styles for different color tabs on ends --------------- */
+
+#pagewrapper2.UIplum #globalnav1.lefton #globalnav2 {
+	background: url(http://www.uidaho.edu/images/UIglobalnav_left_plum.gif) top left no-repeat;
+	}
+		
+html>body #pagewrapper2.UIplum #globalnav1.lefton #globalnav2 { /* hides drop shadow PNG from IE6 */
+	background: url(http://www.uidaho.edu/images/UIglobalnav_left_plum.png) top left no-repeat;
+	}
+		
+#pagewrapper2.UIplum #globalnav1.lefton #globalnav3 ul {
+	background: url(http://www.uidaho.edu/images/UIglobalnav_middlelft_plum.gif) top left no-repeat;
+	}
+		
+html>body #pagewrapper2.UIplum #globalnav1.lefton #globalnav3 ul {
+	background: url(http://www.uidaho.edu/images/UIglobalnav_middlelft_plum.png) top left no-repeat;
+	}
+		
+#pagewrapper2.UIplum #globalnav1.righton #globalnav3 {
+	background: url(http://www.uidaho.edu/images/UIglobalnav_right_plum.gif) top right no-repeat;
+	}
+		
+html>body #pagewrapper2.UIplum #globalnav1.righton #globalnav3 { /* hides drop shadow PNG from IE6 */
+	background: url(http://www.uidaho.edu/images/UIglobalnav_right_plum.png) top right no-repeat;
+	}
+		
+#pagewrapper2.UIplum #globalnav1.righton #globalnav3 ul {
+	background: url(http://www.uidaho.edu/images/UIglobalnav_middlert_plum.gif) top right no-repeat;
+	}
+		
+html>body #pagewrapper2.UIplum #globalnav1.righton #globalnav3 ul {
+	background: url(http://www.uidaho.edu/images/UIglobalnav_middlert_plum.png) top right no-repeat;
+	}
+		
+
+/* ------  GLOBAL NAVIGATION BAR - STONE - Special styles for different color tabs on ends --------------- */
+
+#pagewrapper2.UIstone #globalnav1.lefton #globalnav2 {
+	background: url(http://www.uidaho.edu/images/UIglobalnav_left_stone.gif) top left no-repeat;
+	}
+		
+html>body #pagewrapper2.UIstone #globalnav1.lefton #globalnav2 { /* hides drop shadow PNG from IE6 */
+	background: url(http://www.uidaho.edu/images/UIglobalnav_left_stone.png) top left no-repeat;
+	}
+		
+#pagewrapper2.UIstone #globalnav1.lefton #globalnav3 ul {
+	background: url(http://www.uidaho.edu/images/UIglobalnav_middlelft_stone.gif) top left no-repeat;
+	}
+		
+html>body #pagewrapper2.UIstone #globalnav1.lefton #globalnav3 ul {
+	background: url(http://www.uidaho.edu/images/UIglobalnav_middlelft_stone.png) top left no-repeat;
+	}
+		
+#pagewrapper2.UIstone #globalnav1.righton #globalnav3 {
+	background: url(http://www.uidaho.edu/images/UIglobalnav_right_stone.gif) top right no-repeat;
+	}
+		
+html>body #pagewrapper2.UIstone #globalnav1.righton #globalnav3 { /* hides drop shadow PNG from IE6 */
+	background: url(http://www.uidaho.edu/images/UIglobalnav_right_stone.png) top right no-repeat;
+	}
+		
+#pagewrapper2.UIstone #globalnav1.righton #globalnav3 ul {
+	background: url(http://www.uidaho.edu/images/UIglobalnav_middlert_stone.gif) top right no-repeat;
+	}
+		
+html>body #pagewrapper2.UIstone #globalnav1.righton #globalnav3 ul {
+	background: url(http://www.uidaho.edu/images/UIglobalnav_middlert_stone.png) top right no-repeat;
+	}
+		
+
+/* ------  GLOBAL NAVIGATION BAR - GOLD - Special styles for different color tabs on ends --------------- */
+
+#pagewrapper2.UIgold #globalnav1.lefton #globalnav2 {
+	background: url(http://www.uidaho.edu/images/UIglobalnav_left_gold.gif) top left no-repeat;
+	}
+		
+html>body #pagewrapper2.UIgold #globalnav1.lefton #globalnav2 { /* hides drop shadow PNG from IE6 */
+	background: url(http://www.uidaho.edu/images/UIglobalnav_left_gold.png) top left no-repeat;
+	}
+		
+#pagewrapper2.UIgold #globalnav1.lefton #globalnav3 ul {
+	background: url(http://www.uidaho.edu/images/UIglobalnav_middlelft_gold.gif) top left no-repeat;
+	}
+		
+html>body #pagewrapper2.UIgold #globalnav1.lefton #globalnav3 ul {
+	background: url(http://www.uidaho.edu/images/UIglobalnav_middlelft_gold.png) top left no-repeat;
+	}
+		
+#pagewrapper2.UIgold #globalnav1.righton #globalnav3 {
+	background: url(http://www.uidaho.edu/images/UIglobalnav_right_gold.gif) top right no-repeat;
+	}
+		
+html>body #pagewrapper2.UIgold #globalnav1.righton #globalnav3 { /* hides drop shadow PNG from IE6 */
+	background: url(http://www.uidaho.edu/images/UIglobalnav_right_gold.png) top right no-repeat;
+	}
+		
+#pagewrapper2.UIgold #globalnav1.righton #globalnav3 ul {
+	background: url(http://www.uidaho.edu/images/UIglobalnav_middlert_gold.gif) top right no-repeat;
+	}
+		
+html>body #pagewrapper2.UIgold #globalnav1.righton #globalnav3 ul {
+	background: url(http://www.uidaho.edu/images/UIglobalnav_middlert_gold.png) top right no-repeat;
+	}
+		
+
+/* ------  GLOBAL NAVIGATION BAR - SILVER - Special styles for different color tabs on ends --------------- */
+
+#pagewrapper2.UIsilver #globalnav1.lefton #globalnav2 {
+	background: url(http://www.uidaho.edu/images/UIglobalnav_left_silver.gif) top left no-repeat;
+	}
+		
+html>body #pagewrapper2.UIsilver #globalnav1.lefton #globalnav2 { /* hides drop shadow PNG from IE6 */
+	background: url(http://www.uidaho.edu/images/UIglobalnav_left_silver.png) top left no-repeat;
+	}
+		
+#pagewrapper2.UIsilver #globalnav1.lefton #globalnav3 ul {
+	background: url(http://www.uidaho.edu/images/UIglobalnav_middlelft_silve.gif) top left no-repeat;
+	}
+		
+html>body #pagewrapper2.UIsilver #globalnav1.lefton #globalnav3 ul {
+	background: url(http://www.uidaho.edu/images/UIglobalnav_middlelft_silve.png) top left no-repeat;
+	}
+		
+#pagewrapper2.UIsilver #globalnav1.righton #globalnav3 {
+	background: url(http://www.uidaho.edu/images/UIglobalnav_right_silver.gif) top right no-repeat;
+	}
+		
+html>body #pagewrapper2.UIsilver #globalnav1.righton #globalnav3 { /* hides drop shadow PNG from IE6 */
+	background: url(http://www.uidaho.edu/images/UIglobalnav_right_silver.png) top right no-repeat;
+	}
+		
+#pagewrapper2.UIsilver #globalnav1.righton #globalnav3 ul {
+	background: url(http://www.uidaho.edu/images/UIglobalnav_middlert_silver.gif) top right no-repeat;
+	}
+		
+html>body #pagewrapper2.UIsilver #globalnav1.righton #globalnav3 ul {
+	background: url(http://www.uidaho.edu/images/UIglobalnav_middlert_silver.png) top right no-repeat;
+	}
+		
+
+/* --- BASIC - for basic silver background --- */
+
+#basic1 {
+	width:863px;
+	margin:0;
+	padding:0;
+	}
+
+#basic2 {
+	margin:0;
+	padding:20px;
+	}
+
+
+/* --- FEATURES - used on Home Page --- */
+
+#features1 {
+	width:863px;
+	height:auto;
+	margin:0;
+	padding:0;
+	background: url(http://www.uidaho.edu/images/UIfeatures_bkgd.gif) top left repeat-y;
+	}
+
+#features2 {
+	margin:0;
+	padding:4px 0 10px 0;
+	}
+
+
+/* ------ FEATURES LEFT DEFAULT STYLE - left side if using one large image/flash file --------------- */
+
+#featuresleft1 {
+	float:left;
+	width:615px;
+	height:296px;
+	margin:0;
+	padding:0;
+	}
+
+/* ------ MAIN FEATURE NO TEXT CLASSES (DEFAULT) - left side styles if using one large image/flash file --------------- */
+
+#features1 img {
+	border:0;
+	}
+
+/* ------ MAIN FEATURE WITH TEXT CLASSES - left side if using image with text to the right of it --------------- */
+
+.mainfeaturewithtext #featuresleft1 {
+	float:left;
+	width:604px;
+	height:286px;
+	margin:0;
+	padding:0;
+	background: url(http://www.uidaho.edu/images/UIfeatures_mf_bkgd.gif) top right no-repeat;
+	}
+
+html>body .mainfeaturewithtext #featuresleft1 { /* hides drop shadow PNG from IE6 */
+	background: url(http://www.uidaho.edu/images/UIfeatures_mf_bkgd.png) top right no-repeat;
+	}
+
+.mainfeaturewithtext #featuresleft2 {
+	margin:0 13px 0 0;
+	padding:0;
+	}
+
+.mainfeaturewithtext #featuresleft1 img {
+	float:left;
+	margin:0;
+	padding:0;
+	}
+
+.mainfeaturewithtext #featuresleft1 img.imagewithtext {
+	float:left;
+	margin:0 12px 0 0;
+	padding:0;
+	border: #ffffff 1px solid;
+	border-left: #ffffff 2px solid;
+	}
+
+.mainfeaturewithtext #featureslefttext {
+	margin:0;
+	padding:2px 20px 20px 10px;
+	text-align:left;
+	}
+
+.mainfeaturewithtext #featureslefttext h1, .mainfeaturewithtext #featureslefttext h2, .mainfeaturewithtext #featureslefttext h3, .mainfeaturewithtext #featureslefttext h4, .mainfeaturewithtext #featureslefttext h5, .mainfeaturewithtext #featureslefttext h6  {
+	margin:10px 0 6px 0;
+	padding:0;
+	font-family:Arial, Verdana, Helvetica, sans-serif;
+	line-height:1.5em;
+	font-weight:bold;
+	color:#666666;
+	}
+
+.mainfeaturewithtext #featureslefttext p {
+	margin:0 0 10px 0;
+	padding:0;
+	font-family:Arial, Verdana, Helvetica, sans-serif;
+	/*font-size:1.0em;*/
+	line-height:1.2em;
+	color:#666666;
+	}
+
+
+/* ------ FEATURES - right side container for subfeatures --------------- */
+
+#featuresright1 {
+	float:right;
+	width:248px;
+	height:296px;
+	text-align:right;
+	display:block;
+	}
+
+#featuresright2 {
+	margin:0 8px 0 0;
+	padding:0;
+	border:0;
+	}
+
+/* ------ FEATURES - right side classes if using images for subfeatures --------------- */
+
+#featuresright2 h3 {
+	margin:0;
+	padding:0 0 6px 0;
+	border:0;
+	}
+
+#featuresright2 h3 img {
+	margin:0;
+	padding:0;
+	border:0;
+	}
+
+
+/* --- AUDIENCE SECTION - used at top of Portals and for all of Level 2, Level 3, etc. --- */
+
+#audience1 {
+	width:863px;
+	height:auto;
+	margin:0;
+	padding:0;
+	background: url(http://www.uidaho.edu/images/UIfeatures_bkgd.gif) top left repeat-y;
+	}
+
+#audience2 {
+	margin:0;
+	padding:0;
+	}
+
+#audienceleft1 {
+	float:left;
+	width:190px;
+	height:auto;
+	margin:0;
+	padding:0;
+	}
+
+#audienceright1 { 
+     margin:0 0 0 190px; 
+     padding:0 0 20px 0; 
+       min-height:560px; 
+       height:auto !important; 
+     height:560px; 
+     } 
+	 
+/*#audienceright1 table { 
+     padding:0 0 20px 0; 
+     } */
+	 
+	 
+/* Hide from IE5-mac. Only IE-win sees this. \*/
+ 
+* html #audienceleft1 {
+  margin-right:-3px;
+  }
+ 
+* html #audienceright1 {
+  margin-left:0;
+  }
+ 
+/* End hide from IE5/mac */
+
+
+
+/* --- AUDIENCE SECTION - LEFT TABBED NAV DEFAULT STYLES (alternative to UDM navigation) --- */
+
+#audiencenavleft1 ul {
+	margin:18px 0 0 0;
+	padding:0;
+	list-style-type:none;
+	border-top:1px solid #f6f2ec;
+	border-left:2px solid #ffffff;
+	background-color:#e8e2d1;
+	}
+		
+#audiencenavleft1 ul li {
+	margin:0;
+	padding:0;
+	border-bottom:1px solid #f6f2ec;
+	text-transform:uppercase;
+	}
+		
+#audiencenavleft1 ul li.dummy { /* to hide first fake list item - IE can have irregular margins and padding */
+	display:none;
+	}
+		
+#audiencenavleft1 ul li a {
+	display:block;
+	width:166px;
+	/*height:13px;*/
+	margin:0;
+	padding:11px 0 11px 22px;
+	font:bold 12px verdana, arial, helvetica, sans-serif;
+	}
+		
+#audiencenavleft1 ul li a:link {
+	color:#666666;
+	text-decoration:none;
+	}
+		
+#audiencenavleft1 ul li a:visited {
+	color:#666666;
+	text-decoration:none;
+	}
+		
+#audiencenavleft1 ul li a:hover {
+	color:#993300;
+	text-decoration:none;
+	background-color:#ffffff;
+	}
+				
+#audiencenavleft1 ul li a:active { 
+	text-decoration:none;
+	}
+		
+#audiencenavleft1 ul li a:focus { 
+	color:#993300;
+	text-decoration:none;
+	background-color:#ffffff;
+	}
+		
+#audiencenavleft1 ul li a.youarehere { /* ADDED THIS BECAUSE ACTIVE STATE OF "A" ISN'T WORKING */
+	color:#993300;
+	text-decoration:none;
+	background-color:#ffffff;
+	}
+		
+#audiencenavleft2 {
+  min-height:260px;
+  height:auto !important;
+	height:260px;
+	}
+		
+/* --- AUDIENCE SECTION - LEFT STYLES for items below tabbed navigation --- */
+
+/*#audienceleft1 #audiencenavleft2 h1.leftmainheading, #audienceleft1 #audiencenavleft2 h2.leftmainheading, #audienceleft1 #audiencenavleft2 h3.leftmainheading, #audienceleft1 #audiencenavleft2 h4.leftmainheading, #audienceleft1 #audiencenavleft2 h5.leftmainheading, #audienceleft1 #audiencenavleft2 h6.leftmainheading {
+	margin:20px 15px 5px 24px;
+	padding:0;
+	font-weight:bold;
+	text-transform:uppercase;
+	font-size:1.1em;
+	line-height:1.0em;
+	}*/
+	
+.leftmainheading, .leftmainheadingnewsection1, .leftmainheadingnewsection2 {
+	margin:20px 15px 5px 24px;
+	padding:0;
+	font-weight:bold;
+	text-transform:uppercase;
+	font-size:1.1em;
+	line-height:1.0em;
+	}
+	
+/*#audienceleft1 #audiencenavleft2 h1.leftsubheading, #audienceleft1 #audiencenavleft2 h2.leftsubheading, #audienceleft1 #audiencenavleft2 h3.leftsubheading, #audienceleft1 #audiencenavleft2 h4.leftsubheading, #audienceleft1 #audiencenavleft2 h5.leftsubheading, #audienceleft1 #audiencenavleft2 h6.leftsubheading {
+	margin:0 15px 10px 24px;
+	padding:0;
+	text-transform:none;
+	font-weight:bold;
+	font-size:1.1em;
+	}*/
+	
+.leftsubheading, .leftsubheadingnewsection1, .leftsubheadingnewsection2 {
+	margin:0 15px 10px 24px;
+	padding:0;
+	font-weight:bold;
+	font-size:1.1em;
+	}
+	
+/*#audienceleft1 #audiencenavleft2 h1.leftcolorsubheading, #audienceleft1 #audiencenavleft2 h2.leftcolorsubheading, #audienceleft1 #audiencenavleft2 h3.leftcolorsubheading, #audienceleft1 #audiencenavleft2 h4.leftcolorsubheading, #audienceleft1 #audiencenavleft2 h5.leftcolorsubheading, #audienceleft1 #audiencenavleft2 h6.leftcolorsubheading  {
+	margin:0 15px 10px 24px;
+	padding:0;
+	text-transform:none;
+	font-weight:bold;
+	font-size:1.1em;
+	}*/
+	
+.leftcolorsubheading, .leftcolorsubheadingnewsection1, .leftcolorsubheadingnewsection2  {
+	margin:0 15px 10px 24px;
+	padding:0;
+	font-weight:bold;
+	font-size:1.1em;
+	}
+	
+.UImoss #audienceleft1 #audiencenavleft2 h1.leftcolorsubheading, .UImoss #audienceleft1 #audiencenavleft2 h2.leftcolorsubheading, .UImoss #audienceleft1 #audiencenavleft2 h3.leftcolorsubheading, .UImoss #audienceleft1 #audiencenavleft2 h4.leftcolorsubheading, .UImoss #audienceleft1 #audiencenavleft2 h5.leftcolorsubheading, .UImoss #audienceleft1 #audiencenavleft2 h6.leftcolorsubheading  {
+	color:#57797b;
+	}
+	
+.UIberry #audienceleft1 #audiencenavleft2 h1.leftcolorsubheading, .UIberry  #audienceleft1 #audiencenavleft2 h2.leftcolorsubheading, .UIberry  #audienceleft1 #audiencenavleft2 h3.leftcolorsubheading, .UIberry  #audienceleft1 #audiencenavleft2 h4.leftcolorsubheading, .UIberry  #audienceleft1 #audiencenavleft2 h5.leftcolorsubheading, .UIberry  #audienceleft1 #audiencenavleft2 h6.leftcolorsubheading  {
+	color:#8f4966;
+	}
+	
+.UIcopper #audienceleft1 #audiencenavleft2 h1.leftcolorsubheading, .UIcopper #audienceleft1 #audiencenavleft2 h2.leftcolorsubheading, .UIcopper #audienceleft1 #audiencenavleft2 h3.leftcolorsubheading, .UIcopper #audienceleft1 #audiencenavleft2 h4.leftcolorsubheading, .UIcopper #audienceleft1 #audiencenavleft2 h5.leftcolorsubheading, .UIcopper #audienceleft1 #audiencenavleft2 h6.leftcolorsubheading {
+	color:#b06048;
+	}
+	
+.UIplum #audienceleft1 #audiencenavleft2 h1.leftcolorsubheading, .UIplum #audienceleft1 #audiencenavleft2 h2.leftcolorsubheading, .UIplum #audienceleft1 #audiencenavleft2 h3.leftcolorsubheading, .UIplum #audienceleft1 #audiencenavleft2 h4.leftcolorsubheading, .UIplum #audienceleft1 #audiencenavleft2 h5.leftcolorsubheading, .UIplum #audienceleft1 #audiencenavleft2 h6.leftcolorsubheading {
+	color:#635476;
+	}
+	
+.UIstone #audienceleft1 #audiencenavleft2 h1.leftcolorsubheading, .UIstone #audienceleft1 #audiencenavleft2 h2.leftcolorsubheading, .UIstone #audienceleft1 #audiencenavleft2 h3.leftcolorsubheading, .UIstone #audienceleft1 #audiencenavleft2 h4.leftcolorsubheading, .UIstone #audienceleft1 #audiencenavleft2 h5.leftcolorsubheading, .UIstone #audienceleft1 #audiencenavleft2 h6.leftcolorsubheading {
+	color:#436188;
+	}
+	
+.UIgold #audienceleft1 #audiencenavleft2 h1.leftcolorsubheading, .UIgold #audienceleft1 #audiencenavleft2 h2.leftcolorsubheading, .UIgold #audienceleft1 #audiencenavleft2 h3.leftcolorsubheading, .UIgold #audienceleft1 #audiencenavleft2 h4.leftcolorsubheading, .UIgold #audienceleft1 #audiencenavleft2 h5.leftcolorsubheading, .UIgold #audienceleft1 #audiencenavleft2 h6.leftcolorsubheading {
+	color:#b18a52;
+	}
+	
+.UIsilver #audienceleft1 #audiencenavleft2 h1.leftcolorsubheading, .UIsilver #audienceleft1 #audiencenavleft2 h2.leftcolorsubheading, .UIsilver #audienceleft1 #audiencenavleft2 h3.leftcolorsubheading, .UIsilver #audienceleft1 #audiencenavleft2 h4.leftcolorsubheading, .UIsilver #audienceleft1 #audiencenavleft2 h5.leftcolorsubheading, .UIsilver #audienceleft1 #audiencenavleft2 h6.leftcolorsubheading {
+	color:#9d9d9d;
+	}
+	
+#audiencenavleft2 p {
+	margin:0 10px 10px 24px;
+	padding:0;
+	}
+	
+#audiencenavleft2 ul {
+	margin:20px 10px 20px 24px;
+	padding:0;
+	list-style-type:none;
+	}
+		
+#audiencenavleft2 h1.leftmainheadingnewsection1, #audiencenavleft2 h2.leftmainheadingnewsection1, #audiencenavleft2 h3.leftmainheadingnewsection1, #audiencenavleft2 h4.leftmainheadingnewsection1, #audiencenavleft2 h5.leftmainheadingnewsection1, #audiencenavleft2 h6.leftmainheadingnewsection1, #audiencenavleft2 h1.leftsubheadingnewsection1, #audiencenavleft2 h2.leftsubheadingnewsection1, #audiencenavleft2 h3.leftsubheadingnewsection1, #audiencenavleft2 h4.leftsubheadingnewsection1, #audiencenavleft2 h5.leftsubheadingnewsection1, #audiencenavleft2 h6.leftsubheadingnewsection1, #audiencenavleft2 h1.leftcolorsubheadingnewsection1, #audiencenavleft2 h2.leftcolorsubheadingnewsection1, #audiencenavleft2 h3.leftcolorsubheadingnewsection1, #audiencenavleft2 h4.leftcolorsubheadingnewsection1, #audiencenavleft2 h5.leftcolorsubheadingnewsection1, #audiencenavleft2 h6.leftcolorsubheadingnewsection1, #audiencenavleft2 p.newsection1, #audiencenavleft2 ul.newsection1, .newsection1 {
+	padding-top:10px;
+	border-top:2px solid #ffffff;
+	}
+		
+#audiencenavleft2 h1.leftmainheadingnewsection2, #audiencenavleft2 h2.leftmainheadingnewsection2, #audiencenavleft2 h3.leftmainheadingnewsection2, #audiencenavleft2 h4.leftmainheadingnewsection2, #audiencenavleft2 h5.leftmainheadingnewsection2, #audiencenavleft2 h6.leftmainheadingnewsection2, #audiencenavleft2 h1.leftsubheadingnewsection2, #audiencenavleft2 h2.leftsubheadingnewsection2, #audiencenavleft2 h3.leftsubheadingnewsection2, #audiencenavleft2 h4.leftsubheadingnewsection2, #audiencenavleft2 h5.leftsubheadingnewsection2, #audiencenavleft2 h6.leftsubheadingnewsection2, #audiencenavleft2 h1.leftcolorsubheadingnewsection2, #audiencenavleft2 h2.leftcolorsubheadingnewsection2, #audiencenavleft2 h3.leftcolorsubheadingnewsection2, #audiencenavleft2 h4.leftcolorsubheadingnewsection2, #audiencenavleft2 h5.leftcolorsubheadingnewsection2, #audiencenavleft2 h6.leftcolorsubheadingnewsection2, #audiencenavleft2 ul.newsection2, #audiencenavleft2 p.newsection2, .newsection2 {
+	padding-top:20px;
+	border-top:2px solid #ffffff;
+	}
+		
+#audiencenavleft2 ul li {
+	margin:0;
+	padding:0 0 12px 0;
+	font-weight:bold;
+	}
+	
+#audiencenavleft2 ul li a:link {
+	color:#993300;
+	text-decoration:none;
+	}
+		
+#audiencenavleft2 ul li a:visited {
+	color:#993300;
+	text-decoration:none;
+	}
+		
+#audiencenavleft2 ul li a:hover {
+	color:#993300;
+	text-decoration:underline;
+	}
+				
+#audiencenavleft2 ul li a:active { 
+	color:#993300;
+	text-decoration:none;
+	}
+		
+#audiencenavleft2 ul li a:focus { 
+	color:#993300;
+	text-decoration:none;
+	}
+		
+/* --- AUDIENCE SECTION - RIGHT STYLES for items below tabbed navigation --- */
+
+.UImoss #audienceright1  h1.rightcolorlink, .UImoss #audienceright1  h2.rightcolorlink, .UImoss #audienceright1  h3.rightcolorlink, .UImoss #audienceright1  h4.rightcolorlink, .UImoss #audienceright1  h5.rightcolorlink, .UImoss #audienceright1  h6.rightcolorlink  {
+	color:#57797b;
+	}
+	
+.UIberry #audienceright1  h1.rightcolorlink, .UIberry  #audienceright1  h2.rightcolorlink, .UIberry  #audienceright1  h3.rightcolorlink, .UIberry  #audienceright1  h4.rightcolorlink, .UIberry  #audienceright1  h5.rightcolorlink, .UIberry  #audienceright1  h6.rightcolorlink  {
+	color:#8f4966;
+	}
+	
+.UIcopper #audienceright1  h1.rightcolorlink, .UIcopper #audienceright1  h2.rightcolorlink, .UIcopper #audienceright1  h3.rightcolorlink, .UIcopper #audienceright1  h4.rightcolorlink, .UIcopper #audienceright1  h5.rightcolorlink, .UIcopper #audienceright1  h6.rightcolorlink {
+	color:#b06048;
+	}
+	
+.UIplum #audienceright1  h1.rightcolorlink, .UIplum #audienceright1  h2.rightcolorlink, .UIplum #audienceright1  h3.rightcolorlink, .UIplum #audienceright1  h4.rightcolorlink, .UIplum #audienceright1  h5.rightcolorlink, .UIplum #audienceright1  h6.rightcolorlink {
+	color:#635476;
+	}
+	
+.UIstone #audienceright1  h1.rightcolorlink, .UIstone #audienceright1  h2.rightcolorlink, .UIstone #audienceright1  h3.rightcolorlink, .UIstone #audienceright1  h4.rightcolorlink, .UIstone #audienceright1  h5.rightcolorlink, .UIstone #audienceright1  h6.rightcolorlink {
+	color:#436188;
+	}
+	
+.UIgold #audienceright1  h1.rightcolorlink, .UIgold #audienceright1  h2.rightcolorlink, .UIgold #audienceright1  h3.rightcolorlink, .UIgold #audienceright1  h4.rightcolorlink, .UIgold #audienceright1  h5.rightcolorlink, .UIgold #audienceright1  h6.rightcolorlink {
+	color:#b18a52;
+	}
+	
+.UIsilver #audienceright1  h1.rightcolorlink, .UIsilver #audienceright1  h2.rightcolorlink, .UIsilver #audienceright1  h3.rightcolorlink, .UIsilver #audienceright1  h4.rightcolorlink, .UIsilver #audienceright1  h5.rightcolorlink, .UIsilver #audienceright1  h6.rightcolorlink {
+	color:#9d9d9d;
+	}
+			
+/* --- BOX1 - DEFAULT STYLES - white, rounded corner box with drop shadows --- */
+
+.box1container1 {
+	width:839px;
+	margin:0;
+	padding:0;
+	}
+
+.box1top1 {
+	height:10px;
+	margin:0;
+	padding:0;
+	background: url(http://www.uidaho.edu/images/UIbox1_topleft.gif) top left no-repeat;
+	}
+
+html>body .box1top1 {
+	background: url(http://www.uidaho.edu/images/UIbox1_topleft.png) top left no-repeat;
+	}
+
+.box1top2 {
+	height:10px;
+	margin:0 0 0 10px;
+	padding:0;
+	background: url(http://www.uidaho.edu/images/UIbox1_topright.gif) top right no-repeat;
+	}
+
+html>body .box1top2 {
+	background: url(http://www.uidaho.edu/images/UIbox1_topright.png) top right no-repeat;
+	}
+
+.box1top3 {
+	height:10px;
+	font-size:0px;
+	margin:0 16px 0 0;
+	padding:0;
+	background-color: #ffffff;
+	}
+
+.box1middle1 {
+	margin:0;
+	padding:0;
+	background: url(http://www.uidaho.edu/images/UIbox1_right.gif) top right repeat-y;
+	}
+
+html>body .box1middle1 {
+	background: url(http://www.uidaho.edu/images/UIbox1_right.png) top right repeat-y;
+	}
+
+.box1middle2 {
+	margin:0 16px 0 0;
+	padding:0 0 0 10px;
+	background-color: #ffffff;
+	}
+
+.box1middle2  h4 {
+	text-transform: uppercase;
+	}
+
+.box1bottom1 {
+	margin:0;
+	padding:0;
+	background: url(http://www.uidaho.edu/images/UIbox1_bottomleft.gif) bottom left no-repeat;
+	}
+
+html>body .box1bottom1 {
+	background: url(http://www.uidaho.edu/images/UIbox1_bottomleft.png) bottom left no-repeat;
+	}
+
+.box1bottom2 {
+	margin:0 0 0 10px;
+	padding:0;
+	background: url(http://www.uidaho.edu/images/UIbox1_bottomright.gif) bottom right no-repeat;
+	}
+
+html>body .box1bottom2 {
+	background: url(http://www.uidaho.edu/images/UIbox1_bottomright.png) bottom right no-repeat;
+	}
+
+.box1bottom3 {
+	font-size:0px;
+	height:17px;
+	margin:0 16px 0 0;
+	padding:0;
+	background: url(http://www.uidaho.edu/images/UIbox1_bottom.gif) bottom left repeat-x;
+	}
+
+html>body .box1bottom3 {
+	background: url(http://www.uidaho.edu/images/UIbox1_bottom.png) bottom left repeat-x;
+	}
+
+
+
+/* AUDIENCE SECTION - BOX1 RIGHT SIDE DEFAULT 3 COLUMN STYLES (HOMEPAGE) */
+
+.box1leftcolumn1 {
+	float:left;
+	width:184px;
+	padding:10px 0 0 0;
+	}
+	
+.box1leftcolumn2 {
+	padding:0 31px 0 10px;
+  min-height:360px;
+  height:auto !important;
+	height:360px;
+	}
+
+.box1middlecolumn1 {
+	float:left;
+	width:188px;
+	padding:10px 0 0 0;
+  min-height:360px;
+  height:auto !important;
+	height:360px;
+	}
+
+.box1rightcolumn1 {
+	margin:0 10px 0 414px;
+	padding:10px 0 10px 0;
+  min-height:360px;
+  height:auto !important;
+	height:360px;
+	}
+	
+
+/* --- GUIDES - DEFAULT STYLES - 3 used on bottom of portal page and 1 occasionally floated on other pages --- */
+
+#guidecontainer1 {
+	width:662px;
+	margin:0;
+	padding:0;
+	}
+
+#guidecontainer2 {
+	margin:20px 0 0 0px;
+	padding:0;
+	}
+
+.guidefloat {
+	float:left;
+	width:206px;
+	margin-right:10px;
+	}
+
+.guidenofloat {
+	margin:0 0 0 432px;
+	padding:0;
+	}
+
+.guidebottomtext {
+  min-height:110px;
+  height:auto !important;
+	height:110px;
+	}
+
+.guidebottomlink {
+  min-height:40px;
+  height:auto !important;
+	height:40px;
+	}
+
+.twobottomlinks .guidebottomtext {
+  min-height:100px;
+  height:auto !important;
+	height:100px;
+	}
+
+.twobottomlinks .guidebottomlink {
+  min-height:50px;
+  height:auto !important;
+	height:50px;
+	}
+
+#guidecontainer1 #guidecontainer2 .twobottomlinks .guidebottomlink p {
+	line-height:1.0em;
+	padding-top:0;
+	}
+
+#guidecontainer1 #guidecontainer2 .twobottomlinks .guidebottomlink p a {
+	padding:0;
+	margin:0;
+	line-height:1.0em;
+	}
+
+/* --- BOX2 - DEFAULT STYLES  (DEFAULT is MOSS) - box used for guides --- */
+
+.box2container1 {
+	width:206px;
+	margin:0;
+	padding:0;
+	}
+
+.box2top1 {
+	height:8px;
+	margin:0;
+	padding:0;
+	background: url(http://www.uidaho.edu/images/UIbox2pg_topleft_moss.gif) top left no-repeat;
+	}
+
+html>body .box2top1 {
+	background: url(http://www.uidaho.edu/images/UIbox2pg_topleft_moss.png) top left no-repeat;
+	}
+
+.box2top2 {
+	height:8px;
+	margin:0 0 0 7px;
+	padding:0;
+	background: url(http://www.uidaho.edu/images/UIbox2pg_topright_moss.gif) top right no-repeat;
+	}
+
+html>body .box2top2 {
+	background: url(http://www.uidaho.edu/images/UIbox2pg_topright_moss.png) top right no-repeat;
+	}
+
+.box2top3 {
+	height:8px;
+	font-size:0px;
+	margin:0 7px 0 0;
+	padding:0;
+	background: url(http://www.uidaho.edu/images/UIbox2pg_topmiddle_moss.gif) top left repeat-x;
+	}
+
+.box2topmiddle1 {
+	margin:0;
+	padding:0;
+	height:46px;
+	background: url(http://www.uidaho.edu/images/UIbox2p_top2right_moss.gif) top right repeat-y;
+	}
+
+html>body .box2topmiddle1 {
+	background: url(http://www.uidaho.edu/images/UIbox2pg_top2right_moss.png) top right repeat-y;
+	}
+
+.box2topmiddle2 {
+	margin:0 2px 0 0;
+	padding:0;
+	background: url(http://www.uidaho.edu/images/UIbox2p_top2left_moss.gif) top left repeat-y;
+	}
+
+html>body .box2topmiddle2 {
+	background: url(http://www.uidaho.edu/images/UIbox2pg_top2left_moss.png) top left repeat-y;
+	}
+
+.box2topmiddle3 {
+	margin:0 0 0 2px;
+	padding:0 8px 6px 8px;
+	text-align:center;
+	background: #57797b url(http://www.uidaho.edu/images/UIbox2pg_top2midtop_moss.gif) top left repeat-x;
+	}
+
+.box2bottommiddle1 {
+	margin:0;
+	padding:0;
+	background: url(http://www.uidaho.edu/images/UIbox2p_middle.gif) top left repeat-y;
+	}
+
+.box2bottommiddle2 {
+	margin:0 1px 0 1px;
+	padding:0;
+	background: url(http://www.uidaho.edu/images/UIbox2p_middlegradient.gif) bottom left repeat-x;
+  min-height:120px;
+  height:auto !important;
+	height:120px;
+	}
+
+.box2bottommiddle2 img {
+	margin:0 1px 0 1px;
+	}
+
+.box2bottom1 {
+	margin:0;
+	padding:0;
+	background: url(http://www.uidaho.edu/images/UIbox2p_bottomleft.gif) bottom left no-repeat;
+	}
+
+/*html>body .box2bottom1 {
+	background: url(http://www.uidaho.edu/images/UIbox2p_bottomleft.png) bottom left no-repeat;
+	}*/
+
+.box2bottom2 {
+	margin:0 0 0 7px;
+	padding:0;
+	background: url(http://www.uidaho.edu/images/UIbox2p_bottomright.gif) bottom right no-repeat;
+	}
+
+/*html>body .box2bottom2 {
+	background: url(http://www.uidaho.edu/images/UIbox2p_bottomright.png) bottom right no-repeat;
+	}*/
+
+.box2bottom3 {
+	font-size:0px;
+	height:6px;
+	margin:0 7px 0 0;
+	padding:0;
+	background: url(http://www.uidaho.edu/images/UIbox2p_bottom.gif) bottom left repeat-x;
+	}
+
+/*html>body .box2bottom3 {
+	background: url(http://www.uidaho.edu/images/UIbox2p_bottom.png) bottom left repeat-x;
+	}*/
+
+
+/* -------- BOX2 - Various Color STYLES (DEFAULT is MOSS) --- */
+
+/* ------------- BOX2 - COLOR - BERRY STYLES --- */
+
+#pagewrapper2.UIberry .box2top1 {
+	background: url(http://www.uidaho.edu/images/UIbox2p_topleft_berry.gif) top left no-repeat;
+	}
+
+html>body #pagewrapper2.UIberry .box2top1 {
+	background: url(http://www.uidaho.edu/images/UIbox2p_topleft_berry.png) top left no-repeat;
+	}
+
+#pagewrapper2.UIberry .box2top2 {
+	background: url(http://www.uidaho.edu/images/UIbox2p_topright_berry.gif) top right no-repeat;
+	}
+
+html>body #pagewrapper2.UIberry .box2top2 {
+	background: url(http://www.uidaho.edu/images/UIbox2p_topright_berry.png) top right no-repeat;
+	}
+
+#pagewrapper2.UIberry .box2top3 {
+	background: url(http://www.uidaho.edu/images/UIbox2p_topmiddle_berry.gif) top left repeat-x;
+	}
+
+#pagewrapper2.UIberry .box2topmiddle1 {
+	background: url(http://www.uidaho.edu/images/UIbox2p_top2right_berry.gif) top right repeat-y;
+	}
+
+html>body #pagewrapper2.UIberry .box2topmiddle1 {
+	background: url(http://www.uidaho.edu/images/UIbox2p_top2right_berry.png) top right repeat-y;
+	}
+
+#pagewrapper2.UIberry .box2topmiddle2 {
+	background: url(http://www.uidaho.edu/images/UIbox2p_top2left_berry.gif) top left repeat-y;
+	}
+
+html>body #pagewrapper2.UIberry .box2topmiddle2 {
+	background: url(http://www.uidaho.edu/images/UIbox2p_top2left_berry.png) top left repeat-y;
+	}
+
+#pagewrapper2.UIberry .box2topmiddle3 {
+	background: #8f4966 url(http://www.uidaho.edu/images/UIbox2p_top2midtop_berry.gif) top left repeat-x;
+	}
+
+
+/* ------------- BOX2 - COLOR - COPPER STYLES --- */
+
+#pagewrapper2.UIcopper .box2top1 {
+	background: url(http://www.uidaho.edu/images/UIbox2p_topleft_copper.gif) top left no-repeat;
+	}
+
+html>body #pagewrapper2.UIcopper .box2top1 {
+	background: url(http://www.uidaho.edu/images/UIbox2p_topleft_copper.png) top left no-repeat;
+	}
+
+#pagewrapper2.UIcopper .box2top2 {
+	background: url(http://www.uidaho.edu/images/UIbox2p_topright_copper.gif) top right no-repeat;
+	}
+
+html>body #pagewrapper2.UIcopper .box2top2 {
+	background: url(http://www.uidaho.edu/images/UIbox2p_topright_copper.png) top right no-repeat;
+	}
+
+#pagewrapper2.UIcopper .box2top3 {
+	background: url(http://www.uidaho.edu/images/UIbox2p_topmiddle_copper.gif) top left repeat-x;
+	}
+
+#pagewrapper2.UIcopper .box2topmiddle1 {
+	background: url(http://www.uidaho.edu/images/UIbox2p_top2right_copper.gif) top right repeat-y;
+	}
+
+html>body #pagewrapper2.UIcopper .box2topmiddle1 {
+	background: url(http://www.uidaho.edu/images/UIbox2p_top2right_copper.png) top right repeat-y;
+	}
+
+#pagewrapper2.UIcopper .box2topmiddle2 {
+	background: url(http://www.uidaho.edu/images/UIbox2p_top2left_copper.gif) top left repeat-y;
+	}
+
+html>body #pagewrapper2.UIcopper .box2topmiddle2 {
+	background: url(http://www.uidaho.edu/images/UIbox2p_top2left_copper.png) top left repeat-y;
+	}
+
+#pagewrapper2.UIcopper .box2topmiddle3 {
+	background: #b06048 url(http://www.uidaho.edu/images/UIbox2p_top2midtop_copper.gif) top left repeat-x;
+	}
+
+
+/* ------------- BOX2 - COLOR - PLUM STYLES --- */
+
+#pagewrapper2.UIplum .box2top1 {
+	background: url(http://www.uidaho.edu/images/UIbox2p_topleft_plum.gif) top left no-repeat;
+	}
+
+html>body #pagewrapper2.UIplum .box2top1 {
+	background: url(http://www.uidaho.edu/images/UIbox2p_topleft_plum.png) top left no-repeat;
+	}
+
+#pagewrapper2.UIplum .box2top2 {
+	background: url(http://www.uidaho.edu/images/UIbox2p_topright_plum.gif) top right no-repeat;
+	}
+
+html>body #pagewrapper2.UIplum .box2top2 {
+	background: url(http://www.uidaho.edu/images/UIbox2p_topright_plum.png) top right no-repeat;
+	}
+
+#pagewrapper2.UIplum .box2top3 {
+	background: url(http://www.uidaho.edu/images/UIbox2p_topmiddle_plum.gif) top left repeat-x;
+	}
+
+#pagewrapper2.UIplum .box2topmiddle1 {
+	background: url(http://www.uidaho.edu/images/UIbox2p_top2right_plum.gif) top right repeat-y;
+	}
+
+html>body #pagewrapper2.UIplum .box2topmiddle1 {
+	background: url(http://www.uidaho.edu/images/UIbox2p_top2right_plum.png) top right repeat-y;
+	}
+
+#pagewrapper2.UIplum .box2topmiddle2 {
+	background: url(http://www.uidaho.edu/images/UIbox2p_top2left_plum.gif) top left repeat-y;
+	}
+
+html>body #pagewrapper2.UIplum .box2topmiddle2 {
+	background: url(http://www.uidaho.edu/images/UIbox2p_top2left_plum.png) top left repeat-y;
+	}
+
+#pagewrapper2.UIplum .box2topmiddle3 {
+	background: #635476 url(http://www.uidaho.edu/images/UIbox2p_top2midtop_plum.gif) top left repeat-x;
+	}
+
+
+/* ------------- BOX2 - COLOR - STONE STYLES --- */
+
+#pagewrapper2.UIstone .box2top1 {
+	background: url(http://www.uidaho.edu/images/UIbox2p_topleft_stone.gif) top left no-repeat;
+	}
+
+html>body #pagewrapper2.UIstone .box2top1 {
+	background: url(http://www.uidaho.edu/images/UIbox2p_topleft_stone.png) top left no-repeat;
+	}
+
+#pagewrapper2.UIstone .box2top2 {
+	background: url(http://www.uidaho.edu/images/UIbox2p_topright_stone.gif) top right no-repeat;
+	}
+
+html>body #pagewrapper2.UIstone .box2top2 {
+	background: url(http://www.uidaho.edu/images/UIbox2p_topright_stone.png) top right no-repeat;
+	}
+
+#pagewrapper2.UIstone .box2top3 {
+	background: url(http://www.uidaho.edu/images/UIbox2p_topmiddle_stone.gif) top left repeat-x;
+	}
+
+#pagewrapper2.UIstone .box2topmiddle1 {
+	background: url(http://www.uidaho.edu/images/UIbox2p_top2right_stone.gif) top right repeat-y;
+	}
+
+html>body #pagewrapper2.UIstone .box2topmiddle1 {
+	background: url(http://www.uidaho.edu/images/UIbox2p_top2right_stone.png) top right repeat-y;
+	}
+
+#pagewrapper2.UIstone .box2topmiddle2 {
+	background: url(http://www.uidaho.edu/images/UIbox2p_top2left_stone.gif) top left repeat-y;
+	}
+
+html>body #pagewrapper2.UIstone .box2topmiddle2 {
+	background: url(http://www.uidaho.edu/images/UIbox2p_top2left_stone.png) top left repeat-y;
+	}
+
+#pagewrapper2.UIstone .box2topmiddle3 {
+	background: #436188 url(http://www.uidaho.edu/images/UIbox2p_top2midtop_stone.gif) top left repeat-x;
+	}
+
+
+/* ------------- BOX2 - COLOR - GOLD STYLES --- */
+
+#pagewrapper2.UIgold .box2top1 {
+	background: url(http://www.uidaho.edu/images/UIbox2p_topleft_gold.gif) top left no-repeat;
+	}
+
+html>body #pagewrapper2.UIgold .box2top1 {
+	background: url(http://www.uidaho.edu/images/UIbox2p_topleft_gold.png) top left no-repeat;
+	}
+
+#pagewrapper2.UIgold .box2top2 {
+	background: url(http://www.uidaho.edu/images/UIbox2p_topright_gold.gif) top right no-repeat;
+	}
+
+html>body #pagewrapper2.UIgold .box2top2 {
+	background: url(http://www.uidaho.edu/images/UIbox2p_topright_gold.png) top right no-repeat;
+	}
+
+#pagewrapper2.UIgold .box2top3 {
+	background: url(http://www.uidaho.edu/images/UIbox2p_topmiddle_gold.gif) top left repeat-x;
+	}
+
+#pagewrapper2.UIgold .box2topmiddle1 {
+	background: url(http://www.uidaho.edu/images/UIbox2p_top2right_gold.gif) top right repeat-y;
+	}
+
+html>body #pagewrapper2.UIgold .box2topmiddle1 {
+	background: url(http://www.uidaho.edu/images/UIbox2p_top2right_gold.png) top right repeat-y;
+	}
+
+#pagewrapper2.UIgold .box2topmiddle2 {
+	background: url(http://www.uidaho.edu/images/UIbox2p_top2left_gold.gif) top left repeat-y;
+	}
+
+html>body #pagewrapper2.UIgold .box2topmiddle2 {
+	background: url(http://www.uidaho.edu/images/UIbox2p_top2left_gold.png) top left repeat-y;
+	}
+
+#pagewrapper2.UIgold .box2topmiddle3 {
+	background: #b18a52 url(http://www.uidaho.edu/images/UIbox2p_top2midtop_gold.gif) top left repeat-x;
+	}
+
+
+
+
+/* ------------- BOX2 - COLOR - SILVER STYLES --- */
+
+#pagewrapper2.UIsilver .box2top1 {
+	background: url(http://www.uidaho.edu/images/UIbox2p_topleft_silver.gif) top left no-repeat;
+	}
+
+html>body #pagewrapper2.UIsilver .box2top1 {
+	background: url(http://www.uidaho.edu/images/UIbox2p_topleft_silver.png) top left no-repeat;
+	}
+
+#pagewrapper2.UIsilver .box2top2 {
+	background: url(http://www.uidaho.edu/images/UIbox2p_topright_silver.gif) top right no-repeat;
+	}
+
+html>body #pagewrapper2.UIsilver .box2top2 {
+	background: url(http://www.uidaho.edu/images/UIbox2p_topright_silver.png) top right no-repeat;
+	}
+
+#pagewrapper2.UIsilver .box2top3 {
+	background: url(http://www.uidaho.edu/images/UIbox2p_topmiddle_silver.gif) top left repeat-x;
+	}
+
+#pagewrapper2.UIsilver .box2topmiddle1 {
+	background: url(http://www.uidaho.edu/images/UIbox2p_top2right_silver.gif) top right repeat-y;
+	}
+
+html>body #pagewrapper2.UIsilver .box2topmiddle1 {
+	background: url(http://www.uidaho.edu/images/UIbox2p_top2right_silver.png) top right repeat-y;
+	}
+
+#pagewrapper2.UIsilver .box2topmiddle2 {
+	background: url(http://www.uidaho.edu/images/UIbox2p_top2left_silver.gif) top left repeat-y;
+	}
+
+html>body #pagewrapper2.UIsilver .box2topmiddle2 {
+	background: url(http://www.uidaho.edu/images/UIbox2p_top2left_silver.png) top left repeat-y;
+	}
+
+#pagewrapper2.UIsilver .box2topmiddle3 {
+	background: #9d9d9d url(http://www.uidaho.edu/images/UIbox2p_top2midtop_silver.gif) top left repeat-x;
+	}
+
+
+/* LINK BOX DEFAULT STYLES - used in audience section on Portal page */
+
+.linkcontainer1 {
+	height:47px;
+	margin:0 10px 0 0;
+	padding:0;
+	text-align:right;
+	}
+
+.linkcontainer2 {
+	float:right;
+	margin:0;
+	padding:0;
+	width:80%;
+	text-align:center;
+	}
+
+.linkboxleft {
+	margin:0;
+	padding:0;
+	background: url(http://www.uidaho.edu/images/UIlinkbox_left_copper.gif) top left no-repeat;
+	}
+
+.linkboxright {
+	margin:0 0 0 10px;
+	background: url(http://www.uidaho.edu/images/UIlinkbox_right_copper.gif) top right no-repeat;
+	}
+
+.linkboxmiddle {
+	margin:0 10px 0 0;
+	height:47px;
+	background: url(http://www.uidaho.edu/images/UIlinkbox_middle_copper.gif) top left repeat-x;
+	}
+
+
+
+/* UI BUTTON DEFAULT STYLES - used in audience section on Level 2 pages */
+
+.buttoncontainer1 {
+	margin:0 10px 0 0;
+	padding:0;
+	/*text-align:center;*/
+	}
+
+.buttoncontainer2 {
+	margin:0 0 0 130px;
+	padding:0;
+	/*min-width:300px;
+	width:auto !important;*/
+	width:300px;
+	}
+
+.level2 #audence1.twocolumn .audiencerightcol1 .buttoncontainer2 {
+	margin:0 0 0 30px;
+	padding:0;
+	/*min-width:300px;
+	width:auto !important;*/
+	width:300px;
+	}
+
+.buttonleft {
+	margin:0;
+	padding:0;
+	background: url(http://www.uidaho.edu/images/UI_button_left.gif) top left no-repeat;
+	}
+
+.buttonright {
+	margin:0 0 0 5px;
+	background: url(http://www.uidaho.edu/images/UI_button_right.gif) top right no-repeat;
+	}
+
+.buttonmiddle {
+	margin:0 5px 0 0;
+	height:33px;
+	background: url(http://www.uidaho.edu/images/UI_button_middle.gif) top left repeat-x;
+	text-align:center;
+	}
+
+.buttonmiddletext {
+	padding:8px 0 2px 0;
+	}
+
+
+
+/* LOCAL NAV - DEFAULT STYLES (used toward top of Level2 pages, usually in div.audienceright1) --- */
+
+.localnav {
+	height:auto;
+	margin:0 0 30px 0;
+	padding:4px 0 4px 0;
+	border-top:2px solid #ffffff;
+	border-bottom:2px solid #ffffff;
+	}
+		
+.level2 #audience1 #audience2 #audienceright1 .localnav ul {
+	margin:0;
+	padding:0;
+	list-style-type:none;
+	display:inline;
+	}
+		
+.level2 #audience1 #audience2 #audienceright1 .localnav ul li {
+	margin:0;
+	padding:0 10px 0 0;
+	display:inline;
+	font-size:1.1em;
+	font-weight:bold;
+	color:#000000;
+	}
+		
+html>body .level2 #audience1 #audience2 #audienceright1 .localnav ul li {
+	white-space:nowrap;
+	}
+		
+.level2 #audience1 #audience2 #audienceright1 .localnav ul li.dummy { /* to hide first fake list item - IE can have irregular margins and padding */
+	display:none;
+	}
+	
+.level2 #audience1 #audience2 #audienceright1 .localnav ul li.youarehere {
+	color:#993300;
+	}
+		
+.level2 #audienceright1 .localnav ul li a:link {
+	color:#000000;
+	text-decoration:none;
+	}
+		
+.level2 #audienceright1 .localnav ul li a:visited {
+	color:#000000;
+	text-decoration:none;
+	}
+		
+.level2 #audienceright1 .localnav ul li a:hover {
+	color:#000000;
+	text-decoration:underline;
+	}
+				
+.level2 #audienceright1 .localnav ul li a:active { 
+	color:#000000;
+	text-decoration:underline;
+	}
+		
+.level2 #audienceright1 .localnav ul li a:focus { 
+	color:#000000;
+	text-decoration:underline;
+	}
+		
+/* PHOTO Styles for floated images within general content */
+
+img.photoright { 
+ 	float:right; 
+	margin:0 5px 10px 10px; 
+	padding-left:20px;
+	} 
+ 
+img.photoleft { 
+	float:left; 
+	margin:0 10px 10px 0;
+	padding-right:20px; 
+	} 
+
+
+/* FOOTER */
+
+#footer {
+	width:868px;
+	margin:0 0 70px 0;
+	padding-right:0;
+	}
+
+#footerrightshadow {
+	width:868px;
+	margin:0;
+	padding:0;
+	}
+
+html>body #footerrightshadow {/* hides drop shadow PNG from IE6 */
+	background:url(http://www.uidaho.edu/images/UIbase_rightshadow.png) top right repeat-y;
+	}
+
+#footertext1 {
+	border-top: 2px solid #ffffff;
+	margin:0 5px 0 0;
+	padding:0;
+	background:url(http://www.uidaho.edu/images/UIfooter_bkgd2.gif) bottom left repeat-y;
+	}
+
+#footertext2 {
+	margin:0 2px 0 2px;
+	padding:10px 0 10px 24px;
+	text-transform:uppercase;
+	}
+
+#footerbottom1 {
+	width:868px;
+	height:9px;
+	margin:0;
+	padding:0;
+	}
+
+html>body #footerbottom1 { /* hides drop shadow PNG from IE6 */
+	background:url(http://www.uidaho.edu/images/UIbase_bottomshadow.png) bottom left no-repeat;
+	}
+
+#footerbottom2 {
+	height:2px;
+	margin:0 0 7px 0;
+	padding:0;
+	background:url(http://www.uidaho.edu/images/UIfooter_bottomwhtborder.gif) top left no-repeat;
+	font-size:0; /* Gets rid of extra space in IE6 PC */
+	}
+
+
+/* SPECIAL STYLES FOR DIFFERENT TYPES OF PAGES */
+
+/* --- BASICBASIC STYLES ---  */
+
+div.basicbasic #banner {
+	height:105px;
+	}
+
+div.basicbasic #bannermiddle {
+	height:25px;
+	}
+
+
+/* --- HOMEPAGE (GOLD) STYLES ---  */
+
+/* ------ HOMEPAGE BANNER STYLES ------ */
+
+div.homePage #bannerbottom1 {
+	background: url(http://www.uidaho.edu/images/UIglobalnav_homebottom.gif) bottom left no-repeat; 
+	}
+		
+/* ------ HOMEPAGE FEATURES STYLES - height of #features1 for homePage  --------------- */
+
+.homePage #features1 {
+	height:305px;
+	}
+
+/* ------ HOMEPAGE AUDIENCE STYLES   --------------- */
+
+.homePage #audience2 {
+	padding:0 0 20px 0;
+	}
+
+.homePage #audienceright1 { 
+       min-height:460px; 
+       height:auto !important; 
+     height:460px; 
+     } 
+	 
+
+/* ------ HOMEPAGE - BOX1 STYLES ------ */
+
+.homePage #audience1 .box1container1 {
+	width:664px;
+	}
+
+.homePage .box1top3 {
+	background: url(http://www.uidaho.edu/images/UIbox1_3col_topbkgd.gif) top left repeat-y;
+	}
+
+.homePage .box1middle2 {
+	background: url(http://www.uidaho.edu/images/UIbox1_3col_middlebkgd.gif) top left repeat-y;
+	}
+
+.homePage .box1bottom3 {
+	background: url(http://www.uidaho.edu/images/UIbox1_3col_bottom.gif) bottom left no-repeat;
+	}
+
+html>body .homePage .box1bottom3 {
+	background: url(http://www.uidaho.edu/images/UIbox1_3col_bottom.png) bottom left no-repeat;
+	}
+	
+
+/* ------ PORTAL PAGE STYLES - bottom of banner and global navigation  --------------- */
+
+#pagewrapper1.portal #bannerbottom1 {
+	background: url(http://www.uidaho.edu/images/UIglobalnavp_bottom_base.gif) top left no-repeat; 
+	}
+
+#pagewrapper1.portal #pagewrapper2.UImoss #bannerbottom2 {
+	background: url(http://www.uidaho.edu/images/UIglobalnavp_bottom_moss.gif) top left no-repeat; 
+	}
+		
+html>body #pagewrapper1.portal #pagewrapper2.UImoss #bannerbottom2 {
+	background: url(http://www.uidaho.edu/images/UIglobalnavp_bottom_moss.png) top left no-repeat; 
+	}
+		
+#pagewrapper1.portal #pagewrapper2.UIplum #bannerbottom2 {
+	background: url(http://www.uidaho.edu/images/UIglobalnavp_bottom_plum.gif) top left no-repeat; 
+	}
+		
+html>body #pagewrapper1.portal #pagewrapper2.UIplum #bannerbottom2 {
+	background: url(http://www.uidaho.edu/images/UIglobalnavp_bottom_plum.png) top left no-repeat; 
+	}
+		
+#pagewrapper1.portal #pagewrapper2.UIcopper #bannerbottom2 {
+	background: url(http://www.uidaho.edu/images/UIglobalnavp_bottom_copper.gif) top left no-repeat; 
+	}
+		
+html>body #pagewrapper1.portal #pagewrapper2.UIcopper #bannerbottom2 {
+	background: url(http://www.uidaho.edu/images/UIglobalnavp_bottom_copper.png) top left no-repeat; 
+	}
+		
+#pagewrapper1.portal #pagewrapper2.UIberry #bannerbottom2 {
+	background: url(http://www.uidaho.edu/images/UIglobalnavp_bottom_berry.gif) top left no-repeat; 
+	}
+		
+html>body #pagewrapper1.portal #pagewrapper2.UIberry #bannerbottom2 {
+	background: url(http://www.uidaho.edu/images/UIglobalnavp_bottom_berry.png) top left no-repeat; 
+	}
+		
+#pagewrapper1.portal #pagewrapper2.UIstone #bannerbottom2 {
+	background: url(http://www.uidaho.edu/images/UIglobalnavp_bottom_stone.gif) top left no-repeat; 
+	}
+		
+html>body #pagewrapper1.portal #pagewrapper2.UIstone #bannerbottom2 {
+	background: url(http://www.uidaho.edu/images/UIglobalnavp_bottom_stone.png) top left no-repeat; 
+	}
+		
+#pagewrapper1.portal #pagewrapper2.UIgold #bannerbottom2 {
+	background: url(http://www.uidaho.edu/images/UIglobalnavp_bottom_gold.gif) top left no-repeat; 
+	}
+		
+html>body #pagewrapper1.portal #pagewrapper2.UIgold #bannerbottom2 {
+	background: url(http://www.uidaho.edu/images/UIglobalnavp_bottom_gold.png) top left no-repeat; 
+	}
+		
+#pagewrapper1.portal #pagewrapper2.UIsilver #bannerbottom2 {
+	background: url(http://www.uidaho.edu/images/UIglobalnavp_bottom_silver.gif) top left no-repeat; 
+	}
+		
+html>body #pagewrapper1.portal #pagewrapper2.UIsilver #bannerbottom2 {
+	background: url(http://www.uidaho.edu/images/UIglobalnavp_bottom_silver.png) top left no-repeat; 
+	}
+		
+/* ------ PORTAL PAGE STYLES - Audience Section  --------------- */
+
+.portal #audience1 {
+	background: url(http://www.uidaho.edu/images/UIportal_bkgd.gif) top left repeat-y;
+	padding-top:6px;
+	}
+
+.portal #audiencenavleft1 ul li a {
+	width:166px;
+	}
+		
+/* ------ PORTAL - BOX1 STYLES ------ */
+
+.portal #audience1 .box1container1 {
+	width:664px;
+	}
+
+.portal .box1top1 {
+	background: url(http://www.uidaho.edu/images/UIbox1p2_topleft.gif) top left no-repeat;
+	}
+
+html>body .portal .box1top1 {
+	background: url(http://www.uidaho.edu/images/UIbox1_topleft.png) top left no-repeat;
+	}
+
+.portal .box1top2 {
+	background: url(http://www.uidaho.edu/images/UIbox1p2_topright.gif) top right no-repeat;
+	}
+
+html>body .portal .box1top2 {
+	background: url(http://www.uidaho.edu/images/UIbox1_topright.png) top right no-repeat;
+	}
+
+.portal .box1top3 {
+	background: url(http://www.uidaho.edu/images/UIbox1p2_topmiddle.gif) top left repeat-y;
+	}
+
+.portal .box1middle1 {
+	background: url(http://www.uidaho.edu/images/UIbox1p2_portal_middle.gif) top left repeat-y;
+	}
+
+html>body .portal .box1middle1 {
+	background: url(http://www.uidaho.edu/images/UIbox1p2_portal_middle.png) top left repeat-y;
+	}
+
+.portal .box1middle2 {
+	margin:0 6px 0 0;
+	padding:0;
+	background: url(http://www.uidaho.edu/images/UIbox1p2_rtmiddlebottom.gif) bottom right no-repeat;
+	}
+
+.portal .box1bottom1 {
+	background: url(http://www.uidaho.edu/images/UIbox1p2_portal_bottomleft.gif) bottom left no-repeat;
+	}
+
+html>body .portal .box1bottom1 {
+	background: url(http://www.uidaho.edu/images/UIbox1_bottomleft.png) bottom left no-repeat;
+	}
+
+.portal .box1bottom2 {
+	background: url(http://www.uidaho.edu/images/UIbox1p2_portal_bottomright.gif) bottom right no-repeat;
+	}
+
+html>body .portal .box1bottom2 {
+	background: url(http://www.uidaho.edu/images/UIbox1p2_portal_bottomright.png) bottom right no-repeat;
+	}
+
+.portal .box1bottom3 {
+	background: url(http://www.uidaho.edu/images/UIbox1p2_portal_bottom.gif) bottom left no-repeat;
+	}
+
+html>body .portal .box1bottom3 {
+	background: url(http://www.uidaho.edu/images/UIbox1p2_portal_bottom.png) bottom left repeat-x;
+	}
+	
+
+/* ------ PORTAL - BOX1 STYLES - COLUMNS ------ */
+
+.portal .box1leftcolumn1 {
+	float:left;
+	width:168px;
+	padding:10px 0 0 0;
+	}
+	
+.portal .box1leftcolumn2 {
+	padding:0;
+	margin:0 10px 0 10px;
+  min-height:360px;
+  height:auto !important;
+	height:360px;
+	}
+
+.portal .box1middlecolumn1 {
+	float:none;
+	width:auto;
+	margin:0 0 0 179px;
+	padding:10px 0 0 0;
+  min-height:360px;
+  height:auto !important;
+	height:360px;
+	}
+
+/* Hide from IE5-mac. Only IE-win sees this. \*/
+ 
+* html .portal #audienceright1 .box1middlecolumn1 {
+	margin-left: 176px;
+	}
+ 
+/* End hide from IE5/mac */
+
+.portal .box1middlecolumn1 img {
+	padding:0 0 0 0;
+	}
+
+.portal .box1middlecolumn1 .box1middletext {
+  min-height:313px;
+  height:auto !important;
+	height:313px;
+	}
+
+.portal .box1middlecolumn1 .linkcontainer1 {
+  min-height:47px;
+  height:auto !important;
+	height:47px;
+	}
+
+
+/* ------ PORTAL - BOX2 STYLES ------ */
+
+.portal #guidecontainer1 .box2topmiddle3 {
+	height:46px;
+	padding:0 5px 0 5px;
+	}
+
+.portal #guidecontainer1 .box2bottommiddle2 {
+  min-height:150px;
+  height:auto !important;
+	height:150px;
+	}
+
+	
+/* --- LEVEL 2 (and level 3, etc.) STYLES ------ */
+
+/* ------ LEVEL 2 PAGE STYLES - bottom of banner  --------------- */
+
+#pagewrapper1.level2 #bannerbottom1 {
+	background: url(http://www.uidaho.edu/images/UIglobalnavp_bottom_base.gif) top left no-repeat; 
+	}
+
+#pagewrapper1.level2 #pagewrapper2.UImoss #bannerbottom2 {
+	background: url(http://www.uidaho.edu/images/UIglobalnav_l2_bottom_moss.gif) top left no-repeat;
+	}
+		
+#pagewrapper1.level2 #pagewrapper2.UIplum #bannerbottom2 {
+	background: url(http://www.uidaho.edu/images/UIglobalnav_l2_bottom_plum.gif) top left no-repeat; 
+	}
+		
+#pagewrapper1.level2 #pagewrapper2.UIcopper #bannerbottom2 {
+	background: url(http://www.uidaho.edu/images/UIglobalnav_l2_bottom_coppe.gif) top left no-repeat; 
+	}
+		
+#pagewrapper1.level2 #pagewrapper2.UIberry #bannerbottom2 {
+	background: url(http://www.uidaho.edu/images/UIglobalnav_l2_bottom_berry.gif) top left no-repeat; 
+	}
+		
+#pagewrapper1.level2 #pagewrapper2.UIstone #bannerbottom2 {
+	background: url(http://www.uidaho.edu/images/UIglobalnav_l2_bottom_stone.gif) top left no-repeat; 
+	}
+		
+#pagewrapper1.level2 #pagewrapper2.UIgold #bannerbottom2 {
+	background: url(http://www.uidaho.edu/images/UIglobalnav_l2_bottom_gold.gif) top left no-repeat; 
+	}
+		
+#pagewrapper1.level2 #pagewrapper2.UIsilver #bannerbottom2 {
+	background: url(http://www.uidaho.edu/images/UIglobalnav_l2_bottom_silve.gif) top left no-repeat; 
+	}
+		
+
+/* ------ LEVEL 2 STYLES - Audience Section  --------------- */
+
+.level2 #audience1 {
+	background: url(http://www.uidaho.edu/images/UIportal_bkgd.gif) top left repeat-y;
+	}
+
+.level2 #audience2 {
+	margin:0;
+	padding:0;
+	}
+
+.level2 #audienceleft1 {
+	margin:0;
+	padding:0;
+	}
+
+.level2 #audiencenavleft1 {
+	margin:0;
+	padding:0;
+	}
+
+/* ------ LEVEL 2 - AUDIENCE left nav and header STYLES ------ */
+
+#pagewrapper1.level2 #audiencenavleft1 ul {
+	margin:0;
+	padding:0;
+	}
+		
+#pagewrapper1.level2 #audiencenavleft1 ul li a {
+	width:166px;
+	}
+		
+#pagewrapper1.level2 #audiencenavleft1 #audienceheaderwrapper {
+	margin:0;
+	padding:0;
+	height:51px; 
+	background:url(http://www.uidaho.edu/images/UIlevel2_leftnav_moss.gif) top left repeat-x;
+	border-left:2px solid #ffffff;
+	}
+		
+#pagewrapper1.level2 .UImoss #audiencenavleft1 #audienceheaderwrapper {
+	background:url(http://www.uidaho.edu/images/UIlevel2_leftnav_moss.gif) top left repeat-x;
+	}
+		
+#pagewrapper1.level2 .UIberry #audiencenavleft1 #audienceheaderwrapper {
+	background:url(http://www.uidaho.edu/images/UIlevel2_leftnav_berry.gif) top left repeat-x;
+	}
+		
+#pagewrapper1.level2 .UIcopper #audiencenavleft1 #audienceheaderwrapper {
+	background:url(http://www.uidaho.edu/images/UIlevel2_leftnav_copper.gif) top left repeat-x;
+	}
+		
+#pagewrapper1.level2 .UIplum #audiencenavleft1 #audienceheaderwrapper {
+	background:url(http://www.uidaho.edu/images/UIlevel2_leftnav_plum.gif) top left repeat-x;
+	}
+		
+#pagewrapper1.level2 .UIstone #audiencenavleft1 #audienceheaderwrapper {
+	background:url(http://www.uidaho.edu/images/UIlevel2_leftnav_stone.gif) top left repeat-x;
+	}
+		
+#pagewrapper1.level2 .UIgold #audiencenavleft1 #audienceheaderwrapper {
+	background:url(http://www.uidaho.edu/images/UIlevel2_leftnav_gold.gif) top left repeat-x;
+	}
+		
+#pagewrapper1.level2 .UIsilver #audiencenavleft1 #audienceheaderwrapper {
+	background:url(http://www.uidaho.edu/images/UIlevel2_leftnav_silver.gif) top left repeat-x;
+	}
+
+#pagewrapper1.level2 #audiencenavleft1 #audienceheaderwrapper h1 {
+	margin:0;
+	padding:10px 10px 10px 24px;
+	color:#ffffff;
+	text-transform:uppercase;
+	font-size:0.9em;
+	line-height:1.3em;
+	}
+		
+		
+		
+/* ------ LEVEL 2 STYLES - Audience Section ONE AND TWO Column STYLES  --------------- */
+
+.level2 #audienceright1 .guidefloat .box2container1 { /* bottom of page padding in case floated guide is content that is lowest on page */
+	padding-bottom:10px;
+	}
+
+
+
+/* ------ LEVEL 2 STYLES - Audience Section ONE Column STYLES  --------------- */
+
+.level2 #audience1.onecolumn #audienceright1 {
+	margin:0 0 0 230px;
+	padding:1px 40px 20px 0; /* padding-top has to be at least 1px or a gap appears in top of #audienceheaderwrapper?*/
+	}
+
+
+
+/* ------ LEVEL 2 STYLES - Audience Section TWO Column STYLES  --------------- */
+
+.level2 #audience1.twocolumn #audienceright1 {
+	margin:0 0 0 210px;
+	padding:1px 0 0 0; 
+	}
+
+/* Hide from IE5-mac. Only IE-win sees this. \*//* 3 pixel jog fix */
+ 
+* html .level2 #audienceright1 p {
+	height: 1%; 
+	}
+ 
+/* End hide from IE5/mac */
+
+#audience1.twocolumn .audiencerightcol1 {
+	margin:0 0 0 0;
+	padding:0;
+	}
+
+#audience1.twocolumn .audiencerightcol2 {
+	float:right;
+	width:172px;
+	margin:0;
+	padding:0;
+	}
+
+
+#audience1.twocolumn .audiencerightheadersection {
+	margin:0;
+	padding:0;
+	}
+
+#audience1.twocolumn .audiencerightsection1 {
+	margin:0;
+	padding:0;
+	}
+
+#audience1.twocolumn .audiencerightsection2 {
+	margin:0;
+	padding:0;
+	}
+
+#audience1.twocolumn .audiencerightsection2 .audiencerightsinglecolumn {
+	margin:0;
+	padding:20px 40px 0 0;
+	}
+
+#audience1.twocolumn .audiencerightsection2 .audiencerightcol2 {
+	width:172px;
+	}
+
+#audience1.twocolumn .audiencerightsection3 {
+	margin:20px 0 0 0;
+	padding:0;
+	background: url(../images/UIaudience_whiteline2.gif) top left repeat-y;
+	}
+
+#audience1.twocolumn .audiencerightsection4 {
+	margin:20px -1px 0 0;
+	padding:0;
+	}
+
+#audience1.twocolumn .audiencerightsection3 .audiencerightcol1  {
+	margin: 0 0 0 0;
+	padding:0 14px 0 0;
+	}
+
+#audience1.twocolumn .audiencerightsection4 .audiencerightcol1  {
+	margin:0 172px 0 0;
+	padding:0 14px 0 0;
+	}
+
+#audience1.twocolumn .audiencerightsection3 .audiencerightcol1 p, #audience1.twocolumn .audiencerightsection4 .audiencerightcol1 p {
+	padding:0 0 10px 0;
+	margin-bottom:0;
+	}
+
+#audience1.twocolumn .audiencerightsection3 .audiencerightcol2 {
+	width:450px;
+	margin:0;
+	padding:0;
+	}
+
+#audience1.twocolumn .audiencerightsection4 .audiencerightcol2 {
+	width:172px;
+	margin:0;
+	padding:0;
+	background: url(http://www.uidaho.edu/images/UIwhite2px.gif) top left repeat-y;
+	}
+
+
+
+/* ------ LEVEL 2 RIGHT Action LINKS - block version - in RIGHT column of TWO Columns  --------------- */
+
+#audience1.twocolumn .audiencerightcol2 .actionimagesingle, #audience1.twocolumn .audiencerightcol2 .actionimagedouble {
+	width:162px;
+	margin:0;
+	padding:0;
+	}
+
+#audience1.twocolumn .audiencerightcol2 .actionimagesingle a, #audience1.twocolumn .audiencerightcol2 .actionimagedouble a {
+	margin:0;
+	padding:0;
+	}
+
+#audience1.twocolumn .audiencerightcol2 .actionimagesingle img, #audience1.twocolumn .audiencerightcol2 .actionimagedouble img {
+	margin:0;
+	padding:0;
+	border:0;
+	}
+
+#audience1.twocolumn .audiencerightcol2 .actionimagedouble img.firstimageoftwo {
+	margin-bottom:5px;
+	}
+
+#audience1.twocolumn .audiencerightcol2 .actionlink {
+	width:172px;
+	margin:0;
+	padding:0 0 20px 0;
+	}
+
+/*html>body #audience1.twocolumn .audiencerightcol2 .actionlink {
+	width:170px;
+	}*/
+
+#audience1.twocolumn .audiencerightsection2 .audiencerightcol2 .actionlink {
+	/*background:#efede7 url(http://www.uidaho.edu/images/UIwhite2px.gif) top right repeat-y;*/
+	}
+
+#audience1.twocolumn .audiencerightsection3 .audiencerightcol2 .actionlink {
+	background:none;
+	border:0;
+	}
+
+#audience1.twocolumn .audiencerightsection4 .audiencerightcol2 .actionlink {
+	width:172px;
+	margin:0;
+	padding:0 0 20px 0;
+	border-left:2px solid #efede7;
+	}
+
+html>body #audience1.twocolumn .audiencerightsection4 .audiencerightcol2 .actionlink {
+	width:170px;
+	}
+
+#audience1.twocolumn .audiencerightcol2 .actionlinktop {
+	margin:0;
+	padding:0;
+	background:url(http://www.uidaho.edu/images/UIrightlink_topleft.gif) top left no-repeat;
+	}
+
+html<body #audience1.twocolumn .audiencerightcol2 .actionlinktop {
+	background:url(http://www.uidaho.edu/images/UIrightlink_topleft.png) top left no-repeat;
+	}
+
+#audience1.twocolumn .audiencerightcol2 .actionlinktopright {
+	font-size:0px;
+	height:5px;
+	margin:0 0 0 5px;
+	padding:0;
+	background-color:#ffffff;
+	}
+
+#audience1.twocolumn .audiencerightcol2 .actionlinkmiddle {
+	background-color:#ffffff;
+	}
+
+#audience1.twocolumn .audiencerightcol2 .actionlinkbottom {
+	margin:0;
+	padding:0;
+	background:url(http://www.uidaho.edu/images/UIrightlink_bottomleft.gif) bottom left no-repeat;
+	position:relative;
+	}
+
+html<body #audience1.twocolumn .audiencerightcol2 .actionlinkbottom {
+	background:url(http://www.uidaho.edu/images/UIrightlink_bottomleft.png) bottom left no-repeat;
+	}
+
+#audience1.twocolumn .audiencerightcol2 .actionlinkbottomright {
+	font-size:0px;
+	height:5px;
+	margin:0 0 0 5px;
+	padding:0;
+	background-color:#ffffff;
+	}
+
+#audience1.twocolumn .audiencerightcol2 .actionlinkmiddle ul {
+	margin:0;
+	padding:0;
+	}
+
+#audience1.twocolumn .audiencerightcol2 .actionlinkmiddle ul li {
+	margin:0;
+	padding:12px 10px 12px 10px;
+	font-size:0.8em;
+	font-weight:bold;
+	border-bottom:1px solid #e5e5e5;
+	}
+
+#audience1.twocolumn .audiencerightcol2 .actionlinkmiddle ul li.actionlinkfirst {
+	padding-top:7px;
+	}
+
+#audience1.twocolumn .audiencerightcol2 .actionlinkmiddle ul li.actionlinklast {
+	padding-bottom:7px;
+	border-bottom:none;
+	}
+#audience1.twocolumn .audiencerightcol2 .actionlinkmiddle ul.normallist {
+	margin:0 0 0 10px;
+	padding:0 10px 10px 10px;
+	list-style-type:disc;
+	list-style-position:outside;
+	}
+
+#audience1.twocolumn .audiencerightcol2 .actionlinkmiddle ul.normallist li {
+	margin:0;
+	padding:0 10px 5px 10px;
+	font-size:0.8em;
+	font-weight:normal;
+	border-bottom:none;
+	}
+
+#audience1.twocolumn .audiencerightcol2 .actionlinkmiddle ul.dashlist {
+	margin:0 0 0 10px;
+	padding:0 10px 5px 0;
+	list-style-type:none;
+	}
+
+#audience1.twocolumn .audiencerightcol2 .actionlinkmiddle ul.dashlist li {
+	margin:0;
+	padding:0 0 3px 0;
+	font-size:0.8em;
+	font-weight:normal;
+	border-bottom:none;
+	}
+
+#audience1.twocolumn .audiencerightcol2 .actionlinkmiddle a:link {
+	color:#993300;
+	text-decoration:none;
+	}
+		
+#audience1.twocolumn .audiencerightcol2 .actionlinkmiddle a:visited {
+	color:#993300;
+	text-decoration:none;
+	}
+		
+#audience1.twocolumn .audiencerightcol2 .actionlinkmiddle a:hover {
+	color:#993300;
+	text-decoration:underline;
+	}
+		
+#audience1.twocolumn .audiencerightcol2 .actionlinkmiddle a:active {
+	color:#993300;
+	text-decoration:none;
+	}
+
+#audience1.twocolumn .audiencerightcol2 .actionlinkmiddle a:focus {
+	color:#993300;
+	text-decoration:none;
+	}
+
+#audience1.twocolumn .audiencerightcol2 .actionlinkmiddle h3.actionheading {
+	padding:7px 10px 12px 10px;
+	margin:0;
+	font-size:0.9em;
+	font-weight:bold;
+	color:#993300;
+	text-transform:uppercase;
+	border-bottom:1px solid #e5e5e5;
+	}
+#audience1.twocolumn .audiencerightcol2 .actionlinkmiddle h3 {
+	padding:5px 10px 5px 10px;
+	/*margin:0;
+	font-size:0.9em;
+	font-weight:bold;
+	color:#993300;
+	text-transform:uppercase;
+	border-bottom:1px solid #e5e5e5;*/
+	}
+
+#audience1.twocolumn .audiencerightcol2 .actionlinkmiddle h3 .subheadingdate {
+	font-style:italic;
+	font-weight:normal;
+	}
+	
+#audience1.twocolumn .audiencerightcol2 .actionlinkmiddle form {
+	margin:0;
+	padding:0 0 12px 0;
+	font-size:0.9em;
+	color:#484848;
+	}
+
+#audience1.twocolumn .audiencerightcol2 .actionlinkmiddle form input {
+	padding:0;
+	margin:12px 10px 0 10px;
+	font-size:0.9em;
+	color:#484848;
+	}
+/* LINK BOX STYLES FOR LINK WITHIN ACTIONLINK white box - used on right side column of Level 2 pages */
+
+.audiencerightcol2 .actionlinkmiddle .linkcontainer1 {
+	height:52px;
+	margin:0 4px 0 4px;
+	padding:2px 0 0 0;
+	text-align:right;
+	}
+
+html>body .audiencerightcol2 .actionlinkmiddle .linkcontainer1 {
+	height:47px;
+	}
+
+.audiencerightcol2 .actionlinkmiddle .linkcontainer2 {
+	float:right;
+	margin:0;
+	padding:0;
+	width:80%;
+	text-align:center;
+	}
+
+.audiencerightcol2 .actionlinkmiddle .linkboxleft {
+	margin:0;
+	padding:0;
+	background: url(http://www.uidaho.edu/images/UIlinkbox_left_copper.gif) top left no-repeat;
+	}
+
+.audiencerightcol2 .actionlinkmiddle .linkboxright {
+	margin:0 0 0 10px;
+	background: url(http://www.uidaho.edu/images/UIlinkbox_right_copper.gif) top right no-repeat;
+	}
+
+.audiencerightcol2 .actionlinkmiddle .linkboxmiddle {
+	margin:0 10px 0 0;
+	height:47px;
+	background: url(http://www.uidaho.edu/images/UIlinkbox_middle_copper.gif) top left repeat-x;
+	}
+
+.level2 #audience1 .audiencerightcol2 .actionlinkmiddle .linkboxmiddle h2 {
+	font-size:0.9em;
+	margin:0;
+	padding:14px 0 0 0;
+	text-align:center;
+	}
+		
+.level2 #audience1 .audiencerightcol2 .actionlinkmiddle .linkboxmiddle h2.singlerowlinkbox {
+	padding:14px 0 0 0;
+	}
+		
+.level2 #audience1 .audiencerightcol2 .actionlinkmiddle .linkboxmiddle h2.doublerowlinkbox {
+	padding:9px 0 0 0;
+	line-height:1.3em;
+	}
+		
+.level2 #audience1 .audiencerightcol2 .actionlinkmiddle .linkboxmiddle a {
+	font-weight:bold;
+	}
+		
+.level2 #audience1 .audiencerightcol2 .actionlinkmiddle .linkboxmiddle a:link {
+	color:#ffffff;
+	text-decoration:none;
+	}
+		
+.level2 #audience1 .audiencerightcol2 .actionlinkmiddle .linkboxmiddle a:visited {
+	color:#ffffff;
+	text-decoration:none;
+	}
+		
+.level2 #audience1 .audiencerightcol2 .actionlinkmiddle .linkboxmiddle a:hover {
+	color:#ffffff;
+	text-decoration:underline;
+	}
+		
+.level2 #audience1 .audiencerightcol2 .actionlinkmiddle .linkboxmiddle a:active {
+	color:#ffffff;
+	text-decoration:none;
+	}
+
+.level2 #audience1 .audiencerightcol2 .actionlinkmiddle .linkboxmiddle a:focus {
+	color:#ffffff;
+	text-decoration:none;
+	}
+	
+/* ------ LEVEL 2 - BOX2 GUIDE STYLES ------ */
+
+.level2 .box2topmiddle3 {
+	height:46px;
+	padding:0 5px 0 5px;
+	}
+
+.level2 .box2bottommiddle2 {
+	background-image:none;
+	background-color:#ffffff;
+  min-height:150px;
+  height:auto !important;
+	height:150px;
+	}
+
+.level2 .box2bottom1 {
+	background: url(http://www.uidaho.edu/images/UIbox2_l2_bottomleft.gif) bottom left no-repeat;
+	}
+
+/*html>body .level2 .box2bottom1 {
+	background: url(http://www.uidaho.edu/images/UIbox2_l2_bottomleft.png) bottom left no-repeat;
+	}*/
+
+.level2 .box2bottom2 {
+	background: url(http://www.uidaho.edu/images/UIbox2_l2_bottomright.gif) bottom right no-repeat;
+	}
+
+/*html>body .level2 .box2bottom2 {
+	background: url(http://www.uidaho.edu/images/UIbox2_l2_bottomright.png) bottom right no-repeat;
+	}*/
+
+.level2 .box2bottom3 {
+	background: url(http://www.uidaho.edu/images/UIbox2_l2_bottom.gif) bottom left repeat-x;
+	}
+
+/*html>body .level2 .box2bottom3 {
+	background: url(http://www.uidaho.edu/images/UIbox2_l2_bottom.png) bottom left repeat-x;
+	}*/
+
+
+
+
+/* ------ TYPOGRAPHY STYLES ------------------------------- */
+
+/* GENERAL STYLES FOR ALL PAGES */
+
+p, li, h1, h2, h3, h4, h5, h6 {
+	font-family: verdana, arial, helvetica, sans-serif;
+	line-height:1.2em;
+	color:#333333;
+	}
+
+p {
+	font-size:1.0em;
+	margin:0 0 10px 0;
+	padding:0;
+	}
+
+ul, ol, dl { /* to prevent disappearing list background bug in IE */ 
+	position: relative;  
+	}
+
+ol, ul {
+	margin:0 0 20px 0;
+	padding:0;
+	}
+		
+li {
+	font-size:1.0em;
+	margin:0 0 10px 0;
+	padding:0;
+	}
+		
+h1, h2, h3, h4, h5, h6  {
+	margin:6px 0 5px 0;
+	padding:0;
+	font-weight:bold;
+	}
+
+h1  {
+	font-size:1.2em;
+	}
+
+h2  {
+	font-size:1.1em;
+	}
+
+h3  {
+	font-size:1.0em;
+	}
+
+h4  {
+	font-size:0.9em;
+	}
+
+h5  {
+	font-size:0.9em;
+	}
+
+h6  {
+	font-size:0.9em;
+	}
+
+img {
+	border:0;
+	}
+
+a:link {
+	color:#9b7924;
+	text-decoration:none;
+	}
+		
+a:visited {
+	color:#9b7924;
+	text-decoration:none;
+	}
+		
+a:hover {
+	color:#9b7924;
+	text-decoration:underline;
+	}
+		
+a:active {
+	color:#9b7924;
+	text-decoration:none;
+	}
+
+a:focus {
+	color:#9b7924;
+	text-decoration:none;
+	}
+
+.linkalone {
+	margin:20px 0 20px 0;
+	}		
+		
+#audience1 #audience2 #audienceright1 ul.listwithbullets {
+	padding-bottom:8px;
+	margin-left:20px;
+	}
+
+#audience1 #audience2 #audienceright1 ul.listwithbullets li {
+	color:#484848;
+	font-size:1.0em;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	line-height:1.5em;
+	list-style-type:disc;
+	}
+
+.indent {
+	margin-left:30px;
+	margin-top:7px;
+	margin-bottom:7px;
+	}
+	
+/* COLOR STYLES */
+
+.UImoss  {
+	}		
+
+div.UImoss #audience1 .box1middlecolumn1 h1 {
+	color:#57797b;
+	}
+
+.UIplum {
+	}		
+
+div.UIplum #audience1 .box1middlecolumn1 h1 {
+	color:#635476;
+	}
+
+.UIcopper {
+	}		
+
+div.UIcopper #audience1 .box1middlecolumn1 h1 {
+	color:#b06048;
+	}
+
+.UIberry {
+	}		
+
+div.UIberry #audience1 .box1middlecolumn1 h1 {
+	color:#8f4966;
+	}
+
+.UIstone {
+	}		
+
+div.UIstone #audience1 .box1middlecolumn1 h1 {
+	color:#436188;
+	}
+
+div.UIsilver #audience1 .box1middlecolumn1 h1 {
+	color:#9d9d9d;
+	}
+
+.UIwhite {
+	}		
+
+
+
+/* ------ BREADCRUMB NAVIGATION TYPOGRAPHY STYLES -------- */
+
+#audience1 #audienceright1 p.breadcrumbnav {
+	font-size:1.0em;
+	margin-top:0;
+	margin-bottom:0;
+	padding:0;
+	color:#484848;
+	}
+		
+#audience1 #audienceright1 p.breadcrumbnav a:link {
+	color:#993300;
+	text-decoration:none;
+	font-weight:normal;
+	}
+		
+#audience1 #audienceright1 p.breadcrumbnav a:visited {
+	color:#993300;
+	text-decoration:none;
+	font-weight:normal;
+	}
+		
+#audience1 #audienceright1 p.breadcrumbnav a:hover {
+	color:#993300;
+	text-decoration:underline;
+	font-weight:normal;
+	}
+		
+#audience1 #audienceright1 p.breadcrumbnav a:active {
+	color:#993300;
+	text-decoration:none;
+	font-weight:normal;
+	}
+		
+#audience1 #audienceright1 p.breadcrumbnav a:focus {
+	color:#993300;
+	text-decoration:underline;
+	font-weight:normal;
+	}
+
+
+/* ------LINK BOX TYPOGRAPHY - DEFAULT STYLES */
+
+.linkboxmiddle h2 {
+	font-size:1.2em;
+	margin:0;
+	padding:10px 0 0 0;
+	}
+		
+.linkboxmiddle a {
+	font-weight:bold;
+	}
+		
+.linkboxmiddle a:link {
+	color:#ffffff;
+	text-decoration:none;
+	}
+		
+.linkboxmiddle a:visited {
+	color:#ffffff;
+	text-decoration:none;
+	}
+		
+.linkboxmiddle a:hover {
+	color:#ffffff;
+	text-decoration:underline;
+	}
+		
+.linkboxmiddle a:active {
+	color:#ffffff;
+	text-decoration:none;
+	}
+
+.linkboxmiddle a:focus {
+	color:#ffffff;
+	text-decoration:none;
+	}
+
+
+
+/* FEATURES SECTION TYPOGRAPHY STYLES */
+
+#features h1, #features h2, #features h3, #features h4, #features h5, #features h6  {
+	color:#904a2c;
+	}
+
+
+/* AUDIENCE SECTION - DEFAULT (HOMEPAGE) TYPOGRAPHY STYLES */
+
+#audienceright1 h1, #audienceright1 h2, #audienceright1 h3, #audienceright1 h4, #audienceright1 h5, #audienceright1 h6 {
+	color:#993300;
+	font-size:1.0em;
+	line-height:1.5em;
+	}
+
+#audienceright1 div.upcomingevents h1, #audienceright1 div.upcomingevents h2, #audienceright1 div.upcomingevents h3, #audienceright1 div.upcomingevents h4, #audienceright1 div.upcomingevents h5, #audienceright1 div.upcomingevents h6  {
+	color:#484848;
+	padding-bottom:0;
+	margin-bottom:0;
+	}
+
+#audienceright1 p  {
+	line-height:1.5em;
+	}
+
+.promocontainer  {
+	padding-bottom:18px;
+  min-height:89px;
+  height:auto !important;
+	height:107px;
+	}
+
+html>body .promocontainer  {
+	height:89px;
+	}
+
+#audienceright1 .promo  {
+	text-transform:uppercase;
+	color:#484848;
+	margin-bottom:0;
+	}
+
+.icon {
+	float:left;
+	border:0;
+	padding: 0 10px 7px 0;
+	}
+
+#audienceright1 ul {
+	list-style-type:none;
+	}
+
+#audienceright1 ul {
+	list-style-type:none;
+	}
+
+#audienceright1 li, #audienceright1 p {
+	color:#484848;
+	}
+
+#audienceright1 ul li a:link, #audienceright1 p a:link  {
+	color:#484848;
+	text-decoration:none;
+	}	
+		
+#audienceright1 ul li a:visited, #audienceright1 p a:visited{
+	color:#484848;
+	text-decoration:none;
+	}
+	
+#audienceright1 h1 a:link, #audienceright1 h2 a:link, #audienceright1 h3 a:link, #audienceright1 h4 a:link, #audienceright1 h5 a:link, #audienceright1 h6 a:link, #audienceright1 h1 a:visited, #audienceright1 h2 a:visited, #audienceright1 h3 a:visited, #audienceright1 h4 a:visited, #audienceright1 h5 a:visited, #audienceright1 h6 a:visited    
+	{	
+	color:#993300;
+	text-decoration:none;
+	}
+		
+#audienceright1 ul li a:hover, #audienceright1 p a:hover, #audienceright1 h1 a:hover, #audienceright1 h2 a:hover, #audienceright1 h3 a:hover, #audienceright1 h4 a:hover, #audienceright1 h5 a:hover, #audienceright1 h6 a:hover {
+	color:#993300;
+	text-decoration:underline;
+	}
+		
+#audienceright1 ul li a:active, #audienceright1 p a:active, #audienceright1 h1 a:active, #audienceright1 h2 a:active, #audienceright1 h3 a:active, #audienceright1 h4 a:active, #audienceright1 h5 a:active, #audienceright1 h6 a:active   {
+	color:#993300;
+	text-decoration:none;
+	}
+		
+/* PORTAL PAGE TYPOGRAPHY STYLES */
+
+.portal .box1middlecolumn1 h1, .portal .box1middlecolumn1 h2, .portal .box1middlecolumn1 h3, .portal .box1middlecolumn1 h4, .portal .box1middlecolumn1 h5, .portal .box1middlecolumn1 h6, .portal .box1middlecolumn1 ul, .portal .box1middlecolumn1 p {
+	padding:0 20px 0 20px;
+	}
+
+.portal #audienceright1 .box1middlecolumn1 h1 {
+	font-size:1.8em;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	}
+
+.portal .box1middlecolumn1 p {
+	padding-top:20px;
+	line-height:2.0em;
+	}
+
+/* ------PORTAL SECTION - LINK BOX TYPOGRAPHY STYLES - these are the defaults, but there are above styles that have to be overridden - maybe remove some of above??? */
+
+.portal #audience1 .box1middlecolumn1 .linkboxmiddle h2 {
+	font-size:1.1em;
+	margin:0;
+	padding:12px 0 0 0;
+	}
+
+.portal #audience1 .box1middlecolumn1 .linkboxmiddle a {
+	font-weight:bold;
+	}
+		
+.portal #audience1 .box1middlecolumn1 .linkboxmiddle a:link {
+	color:#ffffff;
+	text-decoration:none;
+	}
+		
+.portal #audience1 .box1middlecolumn1 .linkboxmiddle a:visited {
+	color:#ffffff;
+	text-decoration:none;
+	}
+		
+.portal #audience1 .box1middlecolumn1 .linkboxmiddle a:hover {
+	color:#ffffff;
+	text-decoration:underline;
+	}
+		
+.portal #audience1 .box1middlecolumn1 .linkboxmiddle a:active {
+	color:#ffffff;
+	text-decoration:none;
+	}
+
+.portal #audience1 .box1middlecolumn1 .linkboxmiddle a:focus {
+	color:#ffffff;
+	text-decoration:none;
+	}
+
+		
+/* -------PORTAL - GUIDE TYPOGRAPHY STYLES */
+
+.portal #guidecontainer1 .box2topmiddle3 h2, .portal #guidecontainer1 .box2topmiddle3 h3, .portal #guidecontainer1 .box2topmiddle3 h4, .portal #guidecontainer1 .box2topmiddle3 h5, .portal #guidecontainer1 .box2topmiddle3 h6 {
+	margin:0;
+	padding:8px 5px 5px 5px;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:1.3em;
+	color:#ffffff;
+	font-weight:bold;
+	}
+
+.portal #guidecontainer1 .box2topmiddle3 h2.twolineguideheader, .portal #guidecontainer1 .box2topmiddle3 h3 .twolineguideheader, .portal #guidecontainer1 .box2topmiddle3 h4 .twolineguideheader, .portal #guidecontainer1 .box2topmiddle3 h5 .twolineguideheader, .portal #guidecontainer1 .box2topmiddle3 h6 .twolineguideheader {
+	padding:3px 10px 3px 10px;
+	line-height:1.1em;
+	}
+
+.portal #guidecontainer1 .box2bottommiddle2 p {
+	font-size:1.0em;
+	margin:0;
+	padding:10px 15px 10px 15px;
+	color:#333333;
+	line-height:1.5em;
+	}
+
+.portal #guidecontainer1 .box2bottommiddle2 a {
+	font-weight:bold;
+	}
+
+.portal #guidecontainer1 .box2bottommiddle2 a:link {
+	color:#993300;
+	text-decoration:none;
+	}
+		
+.portal #guidecontainer1 .box2bottommiddle2 a:visited {
+	color:#993300;
+	text-decoration:none;
+	}
+		
+.portal #guidecontainer1 .box2bottommiddle2 a:hover {
+	color:#000000;
+	text-decoration:underline;
+	}
+		
+.portal #guidecontainer1 .box2bottommiddle2 a:active {
+	color:#993300;
+	text-decoration:none;
+	}
+
+
+/* ---LEVEL 2 - TYPOGRAPHY STYLES */
+
+.level2 #audienceright1 a:link {
+	color:#993300;
+	text-decoration:none;
+	font-weight:bold;
+	}
+		
+.level2 #audienceright1 a:visited {
+	color:#993300;
+	text-decoration:none;
+	font-weight:bold;
+	}
+		
+.level2 #audienceright1 a:hover {
+	color:#993300;
+	text-decoration:underline;
+	font-weight:bold;
+	}
+		
+.level2 #audienceright1 a:active {
+	color:#993300;
+	text-decoration:none;
+	font-weight:bold;
+	}
+
+.level2 #audienceright1 a:focus {
+	color:#993300;
+	text-decoration:none;
+	font-weight:bold;
+	}
+
+.level2 #audienceheaderwrapper a:link {
+	color:#FFFFFF;
+	text-decoration:none;
+	}
+		
+.level2 #audienceheaderwrapper a:visited {
+	color:#FFFFFF;
+	text-decoration:none;
+	}
+		
+.level2 #audienceheaderwrapper a:hover {
+	color:#FFFFFF;
+	text-decoration:underline;
+	}
+		
+.level2 #audienceheaderwrapper a:active {
+	color:#FFFFFF;
+	text-decoration:none;
+	}
+
+.level2 #audienceheaderwrapper a:focus {
+	color:#FFFFFF;
+	text-decoration:none;
+	}
+
+.level2 #audience1 #audienceright1 .audiencerightcol2 .promocontainer a:link {
+	color:#484848;
+	}
+
+.level2 #audience1 #audienceright1 .audiencerightcol2 .promocontainer a:visited {
+	color:#484848;
+	}
+
+.level2 #audience1 #audienceright1 .audiencerightcol2 .promocontainer a:hover {
+	color:#993300;
+	}
+
+.level2 #audience1 #audienceright1 .audiencerightcol2 .promocontainer p a:link {
+	font-weight:normal;
+	}
+
+.level2 #audience1 #audienceright1 .audiencerightcol2 .promocontainer p a:visited {
+	font-weight:normal;
+	}
+
+.level2 #audience1 #audienceright1 .audiencerightcol2 .promocontainer p a:hover {
+	font-weight:normal;
+	}
+
+.level2 #audience1 #audienceright1 .audiencerightcol2 .promocontainer p a:active {
+	font-weight:normal;
+	}
+
+.level2 #audience1 #audienceright1 .audiencerightcol2 .promocontainer p a:focus {
+	font-weight:normal;
+	}
+
+.level2 #audience1 #audienceright1 .audiencerightcol2 .contentarchivelisting a:link {
+	color:#484848;
+	font-weight:normal;
+	}
+
+.level2 #audience1 #audienceright1 .audiencerightcol2 .contentarchivelisting a:visited {
+	color:#484848;
+	font-weight:normal;
+	}
+
+.level2 #audience1 #audienceright1 .audiencerightcol2 .contentarchivelisting a:hover {
+	color:#993300;
+	font-weight:normal;
+	}
+
+.level2 #audienceright1 h1, .level2 #audienceright1 h2 {
+	color:#484848;
+	font-size:1.4em;
+	}
+
+.level2 #audienceright1 .audiencerightsection1 h1, .level2 #audienceright1 .audiencerightsection1 h2 {
+	color:#484848;
+	font-size:1.7em;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	line-height:1.3em;
+	}
+
+.level2 #audience1.onecolumn #audienceright1 .audiencerightsection1 h1, .level2 #audience1.onecolumn #audienceright1 .audiencerightsection1 h2 {
+	color:#484848;
+	font-size:2.0em;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	line-height:1.3em;
+	}
+
+.level2 #audience1.onecolumn #audienceright1 .audiencerightsection1 h3, .level2 #audienceright1 .audiencerightcol1 h3 {
+	color:#484848;
+	font-size:1.5em;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	line-height:1.3em;
+	padding-bottom:14px;
+	}
+
+.level2 #audience1.onecolumn #audienceright1 .audiencerightsection1 h4, .level2 #audience1.onecolumn #audienceright1 .audiencerightsection4 h4 {
+	color:#484848;
+	font-size:1.0em;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	line-height:1.3em;
+	text-transform:uppercase;
+	padding-bottom:6px;
+	}
+
+.level2 #audience1 #audienceright1 .audiencerightcol1 ul {
+	/*padding-bottom:8px;*/
+	margin-left:00px;
+	}
+
+.level2 #audience1 #audienceright1 .audiencerightcol1 ul li, .level2 #audience1 #audienceright1 .audiencerightsinglecolumn ul li {
+	color:#484848;
+	font-size:1.0em;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	line-height:1.5em;
+	list-style-type:disc;
+	margin-left: 20px;
+	}
+	
+.level2 #audience1 #audienceright1 .audiencerightcol1 ol li, .level2 #audience1 #audienceright1 .audiencerightsinglecolumn ol li {
+	color:#484848;
+	font-size:1.0em;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	line-height:1.5em;
+	list-style-type:decimal;
+	margin-left: 30px;
+	}
+
+
+.level2 #audience1.onecolumn #audienceright1 ul {
+	/*padding-bottom:8px;*/
+	margin-left:20px;
+	}
+
+.level2 #audience1.onecolumn #audienceright1 ul li {
+	color:#484848;
+	font-size:1.0em;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	line-height:1.5em;
+	list-style-type:disc;
+	}
+
+
+
+/* -----------------LEVEL 2 - IndexItem STYLES */
+
+.level2 #audienceright1 .indexitem  {
+	padding-bottom:20px;
+	text-transform:none;
+  	min-height:95px; 
+  	height:auto !important; 
+  	height:115px; 
+	}
+
+html>body .level2 #audienceright1 .indexitem  {
+     height:95px; 
+	}
+
+.level2 #audienceright1 .indexitem img  {
+	float:left;
+	padding:0 10px 5px 0;
+	margin:0;
+	}
+
+.level2 #audienceright1 .indexitem h3  {
+	font-size:1.1em;
+	margin:0;
+	padding:0;
+	text-transform:none;
+	color:#993300;
+	}
+
+.level2 #audienceright1 .indexitem h4.indexsubheading  {
+	font-size:0.9em;
+	margin:0;
+	padding:0;
+	font-weight:normal;
+	text-transform:uppercase;
+	}
+
+
+.level2 #audienceright1 .indexitem h1 a:link, .level2 #audienceright1 .indexitem h2 a:link, .level2 #audienceright1 .indexitem h3 a:link, .level2 #audienceright1 .indexitem h4 a:link, .level2 #audienceright1 .indexitem h5 a:link, .level2 #audienceright1 .indexitem h6 a:link  {
+	color:#993300;
+	text-decoration:none;
+	}
+		
+.level2 #audienceright1 .indexitem h1 a:visited, .level2 #audienceright1 .indexitem h2 a:visited, .level2 #audienceright1 .indexitem h3 a:visited, .level2 #audienceright1 .indexitem h4 a:visited, .level2 #audienceright1 .indexitem h5 a:visited, .level2 #audienceright1 .indexitem h6 a:visited   {
+	color:#993300;
+	text-decoration:none;
+	}
+				
+.level2 #audienceright1 .audiencerightcol2 .rightcolorlink {
+	font-size:1.2em;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-weight:bold;
+	line-height:1.1em;
+	padding-bottom:10px;
+	text-transform:none;
+	}
+
+.level2 .audiencerightcol2 .tertiarycontent, .level2 .audiencerightcol2 .promocontainer {
+	margin:0 10px 0 10px;
+	}
+
+.level2 .audiencerightcol2 .tertiarycontent h2, .level2 .audiencerightcol2 .tertiarycontent h3, .level2 .audiencerightcol2 .tertiarycontent h4, .level2 .audiencerightcol2 .tertiarycontent h5, .level2 .audiencerightcol2 .tertiarycontent h6 {
+	font-size:1.0em;
+	font-weight:bold;
+	text-transform:uppercase;
+	margin-bottom:0;
+	}
+
+.level2 .audiencerightcol2 .tertiarycontent {
+	padding-bottom:40px;
+	}
+
+.level2 #audienceright1 .audiencerightcol2 .tertiarycontent h2.redheading, .level2 #audienceright1 .audiencerightcol2 .tertiarycontent h3.redheading, .level2 #audienceright1 .audiencerightcol2 .tertiarycontent h4.redheading, .level2 #audienceright1 .audiencerightcol2 .tertiarycontent h5.redheading, .level2 #audienceright1 .audiencerightcol2 .tertiarycontent h6.redheading  {
+	color:#993300;
+	}
+
+.level2 .audiencerightcol2 .tertiarycontent h4.redheading a {
+	}
+
+.level2 #audienceright1 .audiencerightcol2 .tertiarycontent h2 a:link, .level2 #audienceright1 .audiencerightcol2 .tertiarycontent h3 a:link, .level2 #audienceright1 .audiencerightcol2 .tertiarycontent h4 a:link, .level2 #audienceright1 .audiencerightcol2 .tertiarycontent h5 a:link, .level2 #audienceright1 .audiencerightcol2 .tertiarycontent h6 a:link  {
+	color:#993300;
+	text-decoration:none;
+	}
+		
+.level2 #audienceright1 .audiencerightcol2 .tertiarycontent h2 a:visited, .level2 #audienceright1 .audiencerightcol2 .tertiarycontent h3 a:visited, .level2 #audienceright1 .audiencerightcol2 .tertiarycontent h4 a:visited, .level2 #audienceright1 .audiencerightcol2 .tertiarycontent h5 a:visited, .level2 #audienceright1 .audiencerightcol2 .tertiarycontent h6 a:visited  {
+	color:#993300;
+	text-decoration:none;
+	}
+		
+.level2 #audienceright1 .audiencerightcol2 .tertiarycontent h2 a:hover, .level2 #audienceright1 .audiencerightcol2 .tertiarycontent h3 a:hover, .level2 #audienceright1 .audiencerightcol2 .tertiarycontent h4 a:hover, .level2 #audienceright1 .audiencerightcol2 .tertiarycontent h5 a:hover, .level2 #audienceright1 .audiencerightcol2 .tertiarycontent h6 a:hover  {
+	color:#993300;
+	text-decoration:underline;
+	}
+		
+.level2 #audienceright1 .audiencerightcol2 .tertiarycontent h2 a:active, .level2 #audienceright1 .audiencerightcol2 .tertiarycontent h3 a:active, .level2 #audienceright1 .audiencerightcol2 .tertiarycontent h4 a:active, .level2 #audienceright1 .audiencerightcol2 .tertiarycontent h5 a:active, .level2 #audienceright1 .audiencerightcol2 .tertiarycontent h6 a:active {
+	color:#993300;
+	text-decoration:none;
+	}
+
+.level2 #audienceright1 .audiencerightcol2 .tertiarycontent h2 a:focus, .level2 #audienceright1 .audiencerightcol2 .tertiarycontent h3 a:focus, .level2 #audienceright1 .audiencerightcol2 .tertiarycontent h4 a:focus, .level2 #audienceright1 .audiencerightcol2 .tertiarycontent h5 a:focus, .level2 #audienceright1 .audiencerightcol2 .tertiarycontent h6 a:focus {
+	color:#993300;
+	text-decoration:underline;
+	}
+
+.level2 .audiencerightcol2 .tertiarycontent ul.contentarchivelisting {
+	margin:0;
+	padding:10px 0 10px 0;
+	}
+
+.level2 .audiencerightcol2 .tertiarycontent ul.contentarchivelisting li {
+	line-height:1.1em;
+	}
+	
+/* LEVEL 2-PORTAL PROMO/GUIDE LINKS */
+
+#audienceright1 div.box2topmiddle3 h2 a:link, #audienceright1 div.box2topmiddle3 h2 a:hover, #audienceright1 div.box2topmiddle3 h2 a:visited, #audienceright1 div.box2topmiddle3 h2 a:active {
+	color:#ffffff !important;
+	}
+	
+	
+
+/* CLASSES COMMENTED OUT FOR COLOR STYLES BELOW WERE FOR main headings on pages - they are #484848 in 08-06-2007 PDF and they do pop out more in that dark gray color */
+/*.level2 .UImoss #audienceright1 h1, .level2 .UImoss #audienceright1 h2, */.level2 .UImoss #audienceright1 .audiencerightcol2 h2.rightcolorlink, .level2 .UImoss #audienceright1 .audiencerightcol2 h3.rightcolorlink, .level2 .UImoss #audienceright1 .audiencerightcol1 h2.rightcolorlink, .level2 .UImoss #audienceright1 .audiencerightcol1 h3.rightcolorlink, .level2 .UImoss #audienceright1 .audiencerightcol2 h4.rightcolorlink, .level2 .UImoss #audienceright1 .audiencerightcol2 h5.rightcolorlink, .level2 .UImoss #audienceright1 .audiencerightcol2 h6.rightcolorlink, .level2 .UImoss #audience1.onecolumn #audienceright1 h3.rightcolorlink {
+	color:#57797b;
+	}
+
+/*.level2 .UIberry #audienceright1 h1, .level2 .UIberry #audienceright1 h2, */.level2 .UIberry #audienceright1 .audiencerightcol2 h2.rightcolorlink, .level2 .UIberry #audienceright1 .audiencerightcol2 h3.rightcolorlink,.level2 .UIberry #audienceright1 .audiencerightcol1 h2.rightcolorlink, .level2 .UIberry #audienceright1 .audiencerightcol1 h3.rightcolorlink, .level2 .UIberry #audienceright1 .audiencerightcol2 h4.rightcolorlink, .level2 .UIberry #audienceright1 .audiencerightcol2 h5.rightcolorlink, .level2 .UIberry #audienceright1 .audiencerightcol2 h6.rightcolorlink, .level2 .UIberry #audience1.onecolumn #audienceright1 h3.rightcolorlink {
+	color:#8f4966;
+	}
+
+/*.level2 .UIcopper #audienceright1 h1, .level2 .UIcopper #audienceright1 h2, */.level2 .UIcopper #audienceright1 .audiencerightcol2 h2.rightcolorlink, .level2 .UIcopper #audienceright1 .audiencerightcol2 h3.rightcolorlink,.level2 .UIcopper #audienceright1 .audiencerightcol1 h2.rightcolorlink, .level2 .UIcopper #audienceright1 .audiencerightcol1 h3.rightcolorlink, .level2 .UIcopper #audienceright1 .audiencerightcol2 h4.rightcolorlink, .level2 .UIcopper #audienceright1 .audiencerightcol2 h5.rightcolorlink, .level2 .UIcopper #audienceright1 .audiencerightcol2 h6.rightcolorlink, .level2 .UIcopper #audience1.onecolumn #audienceright1 h3.rightcolorlink {
+	color:#b06048;
+	}
+
+/*.level2 .UIplum #audienceright1 h1, .level2 .UIplum #audienceright1 h2, */.level2 .UIplum #audienceright1 .audiencerightcol2 h2.rightcolorlink, .level2 .UIplum #audienceright1 .audiencerightcol2 h3.rightcolorlink,.level2 .UIplum #audienceright1 .audiencerightcol1 h2.rightcolorlink, .level2 .UIplum #audienceright1 .audiencerightcol1 h3.rightcolorlink, .level2 .UIplum #audienceright1 .audiencerightcol2 h4.rightcolorlink, .level2 .UIplum #audienceright1 .audiencerightcol2 h5.rightcolorlink, .level2 .UIplum #audienceright1 .audiencerightcol2 h6.rightcolorlink, .level2 .UIplum #audience1.onecolumn #audienceright1 h3.rightcolorlink {
+	color:#635476;
+	}
+
+/*.level2 .UIstone #audienceright1 h1, .level2 .UIstone #audienceright1 h2, */.level2 .UIstone #audienceright1 .audiencerightcol2 h2.rightcolorlink, .level2 .UIstone #audienceright1 .audiencerightcol2 h3.rightcolorlink,.level2 .UIstone #audienceright1 .audiencerightcol1 h2.rightcolorlink, .level2 .UIstone #audienceright1 .audiencerightcol1 h3.rightcolorlink, .level2 .UIstone #audienceright1 .audiencerightcol2 h4.rightcolorlink, .level2 .UIstone #audienceright1 .audiencerightcol2 h5.rightcolorlink, .level2 .UIstone #audienceright1 .audiencerightcol2 h6.rightcolorlink, .level2 .UIstone #audience1.onecolumn #audienceright1 h3.rightcolorlink {
+	color:#436188;
+	}
+
+/*.level2 .UIgold #audienceright1 h1, .level2 .UIgold #audienceright1 h2, */.level2 .UIgold #audienceright1 .audiencerightcol2 h2.rightcolorlink, .level2 .UIgold #audienceright1 .audiencerightcol2 h3.rightcolorlink,.level2 .UIgold #audienceright1 .audiencerightcol1 h2.rightcolorlink, .level2 .UIgold #audienceright1 .audiencerightcol1 h3.rightcolorlink, .level2 .UIgold #audienceright1 .audiencerightcol2 h4.rightcolorlink, .level2 .UIgold #audienceright1 .audiencerightcol2 h5.rightcolorlink, .level2 .UIgold #audienceright1 .audiencerightcol2 h6.rightcolorlink, .level2 .UIgold #audience1.onecolumn #audienceright1 h3.rightcolorlink {
+	color:#b18a52;
+	}
+
+/*.level2 .UIsilver #audienceright1 h1, .level2 .UIsilver #audienceright1 h2, */.level2 .UIsilver #audienceright1 .audiencerightcol2 h2.rightcolorlink, .level2 .UIsilver #audienceright1 .audiencerightcol2 h3.rightcolorlink,.level2 .UIsilver #audienceright1 .audiencerightcol1 h2.rightcolorlink, .level2 .UIsilver #audienceright1 .audiencerightcol1 h3.rightcolorlink, .level2 .UIsilver #audienceright1 .audiencerightcol2 h4.rightcolorlink, .level2 .UIsilver #audienceright1 .audiencerightcol2 h5.rightcolorlink, .level2 .UIsilver #audienceright1 .audiencerightcol2 h6.rightcolorlink, .level2 .UIsilver #audience1.onecolumn #audienceright1 h3.rightcolorlink {
+	color:#9d9d9d;
+	}
+
+.level2 #audienceright1 h3, .level2 #audienceright1 h4, .level2 #audienceright1 h5, .level2 #audienceright1 h6 {
+	color:#484848;
+	}
+
+/* -------GUIDE TYPOGRAPHY STYLES - for stand alone floated boxes (in Level2-type pages) */
+
+#audienceright1 .guidefloat .box2topmiddle3 h2, #audienceright1 .guidefloat .box2topmiddle3 h3, #audienceright1 .guidefloat .box2topmiddle3 h4, #audienceright1 .guidefloat .box2topmiddle3 h5, #audienceright1 .guidefloat .box2topmiddle3 h6 {
+	margin:0;
+	padding:8px 5px 5px 5px;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:1.3em;
+	color:#ffffff;
+	font-weight:bold;
+	}
+
+#audienceright1 .guidefloat .box2topmiddle3 h2.twolineguideheader, #audienceright1 .guidefloat .box2topmiddle3 h3 .twolineguideheader, #audienceright1 .guidefloat .box2topmiddle3 h4 .twolineguideheader, #audienceright1 .guidefloat .box2topmiddle3 h5 .twolineguideheader, #audienceright1 .guidefloat .box2topmiddle3 h6 .twolineguideheader {
+	padding:3px 10px 3px 10px;
+	line-height:1.1em;
+	}
+
+#audienceright1 .guidefloat .box2bottommiddle2 h2, #audienceright1 .guidefloat .box2bottommiddle2 h3, #audienceright1 .guidefloat .box2bottommiddle2 h4, #audienceright1 .guidefloat .box2bottommiddle2 h5, #audienceright1 .guidefloat .box2bottommiddle2 h6 {
+	margin:0;
+	padding:10px 15px 0 15px;
+	font-size:1.0em;
+	color:#484848;
+	font-weight:bold;
+	}
+
+#audienceright1 .guidefloat .box2bottommiddle2 h2.redheading, #audienceright1 .guidefloat .box2bottommiddle2 h3.redheading, #audienceright1 .guidefloat .box2bottommiddle2 h4.redheading, #audienceright1 .guidefloat .box2bottommiddle2 h5.redheading, #audienceright1 .guidefloat .box2bottommiddle2 h6.redheading {
+	color:#993300;
+	}
+
+.level2 #audienceright1 .guidefloat .box2bottommiddle2 p {
+	font-size:1.0em;
+	margin:0;
+	padding:0 15px 10px 15px;
+	color:#333333;
+	line-height:1.5em;
+	}
+
+#audienceright1 .guidefloat .box2bottommiddle2 a {
+	font-weight:bold;
+	}
+
+#audienceright1 .guidefloat .box2bottommiddle2 a:link {
+	color:#993300;
+	text-decoration:none;
+	}
+		
+#audienceright1 .guidefloat .box2bottommiddle2 a:visited {
+	color:#993300;
+	text-decoration:none;
+	}
+		
+#audienceright1 .guidefloat .box2bottommiddle2 a:hover {
+	color:#000000;
+	text-decoration:underline;
+	}
+		
+#audienceright1 .guidefloat .box2bottommiddle2 a:active {
+	color:#993300;
+	text-decoration:none;
+	}
+
+
+/*OL NOTES STYLES*/
+
+#listnotes ol li
+	{
+	list-style-type:decimal;
+	font-size:smaller;
+	}
+
+
+
+/* FOOTER SECTION TYPOGRAPHY STYLES */
+
+#footer h1, #footer h2, #footer h3, #footer h4, #footer h5, #footer h6, #footer p, #footer li  {
+	color:#ffffff;
+	}
+
+#footertext1 p {
+	font-size:0.8em;
+	padding:0;
+	margin:0;
+	font-weight:bold;
+	}
+
+#footer a:link {
+	color:#ffffff;
+	text-decoration:none;
+	}
+		
+#footer a:visited {
+	color:#ffffff;
+	text-decoration:none;
+	}
+		
+#footer a:hover {
+	color:#000000;
+	text-decoration:underline;
+	}
+		
+#footer a:active {
+	color:#ffffff;
+	text-decoration:none;
+	}
+	
+		
+/* ACCESSIBILITY HELPS  */
+
+.hide { 
+ 	height:0; 
+ 	width:0; 
+ 	overflow:hidden; 
+ 	position:absolute;  /* for the benefit of IE5 Mac */
+ 	}
+
+/*MAXIMUM WIDTHS */
+
+#audiencenavleft2 {
+	word-wrap: break-word;
+	}
+
+/* UDM4 HELPS */
+
+#udm ul { 
+     margin-left:0px !important; 
+     margin-top:0px !important; 
+     width:187px !important; 
+     w\idth:187px !important;
+     } 
+
+#udm ul ul {
+	width:120px !important;
+	w\idth:112px !important;
+	background-color:#efede7;
+	}
+
+/* give all anchors a hand cursor */ 
+#udm a { 
+     cursor:pointer !important; 
+     cursor:hand !important; 
+     }
+     
+.flashRight {
+	position:absolute;
+	left:400px;
+	top:130px;
+}
+
+#audience1.twocolumn .audiencerightsection3 .audiencerightcol2 .news {
+	position:absolute;
+	top:370px;
+	left:400px;
+	margin:20px;
+	}
+
+.news a {	color:#993300;
+	font-weight:bold;}
+
+
+a.newslink {cursor:pointer;}
+	
+#audience1.twocolumn .audiencerightsection3 .audiencerightcol2 .news .item {
+	position:relative;
+	margin:5px 5px 15px 10px;
+	}
+	
+.center
+{
+text-align:center
+}
+
+.centerimg
+{
+	margin: 5px 30px 0px 5px;
+	margin-left: 100px;
+    margin-right: 100px;
+	line-height:100%;
+	display: block;
+}
+
+.redlink a:link
+{
+color:#993300;
+font-weight:bold;
+}
+
+.redlink a:visited
+{
+color:#993300;
+font-weight:bold;
+}
+
+
+
+
+
+
+/***********************************/
+/*Added in from givingUIstyles.css */
+/***********************************/
+
+
+
+.mainCopyareaWhite
+{
+    padding: 0px 16px 0px 16px;
+    background-repeat: repeat-x;
+    font-size: 11px;
+    line-height: 18px;
+}
+
+.mainCopyareaWhite h1
+{
+   margin: 0 0 15px 0;
+	padding: 0;
+	font-size: 24px;
+   line-height: 24px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+   color:#b06048 
+}
+.mainCopyareaWhite h2
+{
+	font-size: 12px;
+   line-height: 15px;
+   color:#777777; 
+}
+
+.mainCopyareaWhite p
+{
+    margin:0px;
+    padding:0px;
+	color:#777777;
+	font-size: 11px;
+    line-height: 18px;
+}
+.mainCopyareaWhite ul {
+margin:5px 5px 5px 15px;
+padding:0px;
+color: #777777;
+}
+
+.mainCopyareaWhite ul li {
+margin:5px 5px 5px 5px;
+padding:0px;
+color: #777777;
+line-height: 18px;
+}
+
+.mainCopyareaWhite ol {
+margin:5px 5px 5px 15px;
+padding:0px;
+color: #777777;
+}
+
+.mainCopyareaWhite ol li {
+margin:5px 5px 5px 7px;
+padding:0px;
+color: #777777;
+}
+
+
+
+
+/*  Img boarders */
+.imageBorder
+{
+    border-right: #bc9b6a 2px solid;
+    padding-right: 1px;
+    border-top: #bc9b6a 2px solid;
+    padding-left: 1px;
+    padding-bottom: 1px;
+    border-left: #bc9b6a 2px solid;
+    padding-top: 1px;
+    border-bottom: #bc9b6a 2px solid;
+    margin-bottom: 15px;
+}
+.imageBorder2
+{
+    border-right: #bc9b6a 2px solid;
+    padding-right: 1px;
+    border-top: #bc9b6a 2px solid;
+    padding-left: 1px;
+    padding-bottom: 1px;
+    border-left: #bc9b6a 2px solid;
+    padding-top: 1px;
+    border-bottom: #bc9b6a 2px solid;
+}
+.imageBorderRight
+{
+    border-right: #bc9b6a 2px solid;
+    padding-right: 1px;
+    border-top: #bc9b6a 2px solid;
+    padding-left: 1px;
+    padding-bottom: 1px;
+    border-left: #bc9b6a 2px solid;
+    padding-top: 1px;
+    border-bottom: #bc9b6a 2px solid;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+.imageBorderleft
+{
+    border-right: #bc9b6a 2px solid;
+    padding-right: 1px;
+    border-top: #bc9b6a 2px solid;
+    padding-left: 1px;
+    padding-bottom: 1px;
+    border-left: #bc9b6a 2px solid;
+    padding-top: 1px;
+    border-bottom: #bc9b6a 2px solid;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+.borderRight {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	line-height: 16px;
+	color: #999999;
+	padding: 1px;
+	float: right;
+	margin-bottom: 20px;
+	margin-left: 20px;
+	border: 2px solid #bc9b6a;
+	width: 196px;
+}
+
+.borderRight p {
+	font-size: 10px;
+	line-height: 16px;
+	color: #999999;
+	/*margin:0px;
+    padding:0px;*/
+	color:#777777;
+
+}
+
+.borderRight div
+{
+    margin: 12px;
+}
+
+.borderRight .header
+{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    color: #bc9b6a;
+    font-weight: bold;
+    line-height: 18pt;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-bottom: 5px;
+    padding-top: 0px;
+}
+.borderRight a
+{
+	font-weight:bold; 
+}
+
+
+.sidebox
+{
+    margin-bottom: 15px;
+    font-size: 11px;
+}
+.sidebox form
+{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+.sidebox div.hdr
+{
+    padding-left: 10px;
+    font-weight: bold;
+    font-size: 1.1em;
+    background-image: url(http://www.uidaho.edu/images/UI_silver_sideboxheader.gif);
+    margin-bottom: 2px;
+    text-transform: uppercase;
+    color: white;
+    padding-top: 6px;
+    background-repeat: no-repeat;
+    height: 19px;
+}
+.sidebox div.hdrGold
+{
+    padding-left: 10px;
+    font-weight: bold;
+    font-size: 1.1em;
+    background-image: url(http://www.uidaho.edu/images/UI_gold_sideboxheader.gif);
+    margin-bottom: 2px;
+    text-transform: uppercase;
+    color: white;
+    padding-top: 6px;
+    background-repeat: no-repeat;
+    height: 19px;
+
+}
+.sidebox div.hdr span 
+{
+    text-transform: lowercase;
+}
+.sidebox div.sideboxbrdr
+{
+	border-right: #ececec 1px solid;
+	border-top: #ececec 1px solid;
+	background-image: url(http://www.uidaho.edu/images/UI_silvergradient_sm.gif);
+	border-left: #ececec 1px solid;
+	border-bottom: #ececec 1px solid;
+	background-repeat: repeat-x;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+}
+
+.sidebox div.sideboxbrdr ul
+{
+	list-style-type:none;
+	padding:0px;
+	margin-top: 15px;
+	margin-right: 0px;
+	margin-bottom: 20px;
+	margin-left: 0px;
+}
+
+.sidebox div.sideboxbrdr ul a:link, .sidebox div.sideboxbrdr ul a:visited, .sidebox div.sideboxbrdr ul a:hover, .sidebox div.sideboxbrdr ul a:active 
+{
+color:#777777;
+}
+
+
+.sidebox div.sideboxbrdr div.brdr
+{
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: #999999 1px dotted;
+}
+
+.brdr
+{
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: #999999 1px dotted;
+}
+
+.brdrlinks
+{
+    margin-bottom: 2px;
+    padding-bottom: 2px;
+    border-bottom: #999999 1px dotted;
+}
+
+.sidebox div.sideboxbrdr div.brdr a.hdrlinc 
+{
+   font-weight: bold;
+    font-size:1.8em;
+    font-family:Georgia, "Times New Roman", Times, serif; 
+    color:#b06048;
+	line-height: 1.1em;
+}
+.sidebox div.sideboxbrdr div.brdr1 a.hdrlinc 
+{
+   font-weight: bold;
+    font-size:1.8em;
+	line-height:1.3em;
+    font-family:Georgia, "Times New Roman", Times, serif; 
+    color:#b06048;
+	line-height: 1.1em;
+}
+.sidebox div.sideboxbrdr div.brdr div.right1
+{
+    line-height: 14px;
+    font-size: 11px;
+    margin-left: 80px;
+}
+.sidebox div.sideboxbrdr div.brdr div.right1 p
+{
+    line-height: 14px;
+    font-size: 11px;
+    color:#777777;
+}
+.sidebox div.sideboxbrdr div.brdr div.right1 a
+{
+   font-weight: bold; 
+}
+
+.sidebox2
+{
+    margin-bottom: 20px;
+    font-size: 11px;
+}
+.sidebox2 form
+{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+.sidebox2 div.hdr
+{
+    padding-left: 10px;
+    font-weight: bold;
+    font-size: 1.1em;
+    background-image: url(http://www.uidaho.edu/images/UI_silver_sideboxheader2.gif);
+    margin-bottom: 2px;
+    text-transform: uppercase;
+    color: white;
+    padding-top: 6px;
+    background-repeat: no-repeat;
+    height: 19px;
+}
+.sidebox2 div.hdr span 
+{
+    text-transform: lowercase;
+}
+.sidebox2 div.sideboxbrdr
+{
+	border-right: #ececec 1px solid;
+	border-top: #ececec 1px solid;
+	background-image: url(http://www.uidaho.edu/images/UI_silvergradient_sm.gif);
+	border-left: #ececec 1px solid;
+	border-bottom: #ececec 1px solid;
+	background-repeat: repeat-x;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+}
+
+.sidebox2 div.sideboxbrdr ul
+{
+	list-style-type:none;
+	padding:0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 5px;
+	margin-left: 0px;
+}
+
+.sidebox2 div.sideboxbrdr ul a:link, .sidebox2 div.sideboxbrdr ul a:visited, .sidebox2 div.sideboxbrdr ul a:hover, .sidebox2 div.sideboxbrdr ul a:active 
+{
+color:#777777;
+}
+
+
+.left
+{
+    float: left;
+    width: 80px;
+}
+.right
+{
+    line-height: 17px;
+    font-size: 11px;
+    margin-left: 90px;
+    margin-bottom: 20px;
+}
+
+.right p
+{
+	/*margin:0px;
+    padding:0px;*/
+	color:#777777;
+	line-height: 17px;
+    font-size: 11px;
+
+}
+.left116
+{
+    float: left;
+    width: 116px;
+}
+.right116
+{
+    line-height: 17px;
+    font-size: 11px;
+    margin-left: 136px;
+    margin-bottom: 20px;
+	margin-top:0px;
+	margin-right:0px;
+}
+
+.right116 p
+{
+	/*margin:0px;
+    padding:0px;*/
+	color:#777777;
+	line-height: 17px;
+    font-size: 11px;
+
+}
+
+
+.left194column {
+	float: left;
+	width: 194px;
+}
+
+.left194column ul li {
+	margin:5px 10px 15px 2px;
+	padding:0px;
+}
+.left194column ul {
+	margin:5px 10px 20px 5px;
+	list-style-type:none;
+	padding:0px;
+}
+
+.middle194column {
+	width: 191px;
+	margin:0px 0px 0px 207px;
+	padding:0px;
+	/*margin-left: 15px;*/
+}
+
+
+.right194column {
+	float: right;
+	width: 194px;
+	margin-left: 10px;
+}
+
+.right194column ul li {
+	margin:5px 10px 5px 2px;
+	padding:0px;
+}
+.right194column ul {
+	margin:5px 10px 20px 5px;
+	list-style-type:none;
+	padding:0px;
+}
+
+.quoteCallout {
+	font-weight: bold;
+	font-style:italic;
+	font-size:17px;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	color:#b06048;
+	padding:10px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-style: dotted;
+	border-bottom-style: dotted;
+	border-top-color: #b06048;
+	border-bottom-color: #b06048;
+	line-height: 22px;
+}
+
+.quoteCalloutSmall {
+	font-weight: bold;
+	font-style:italic;
+	font-size:12px;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	color:#b06048;
+	padding:10px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-style: dotted;
+	border-bottom-style: dotted;
+	border-top-color: #b06048;
+	border-bottom-color: #b06048;
+	line-height: 20px;
+}
+
+span.quoteCallout {
+display: block;
+	width:88%;
+}
+
+.columnHeaderCopper {
+	color:#b06048;
+	font-size: 12px;
+	font-weight: bold;
+}
+.containerDiv {
+padding:0;
+margin:0;
+}
+
+.containerDiv:after { 
+content: "."; 
+display: block; 
+height: 0px; 
+clear: both; 
+visibility:hidden;
+}
+.containerDiv {
+display:inline-block;
+}
+/* just added 9-17-08 */
+.containerDiv {
+	overflow:hidden;
+}
+.right194column {
+	float: right;
+	width: 194px;
+	margin-left: 14px;
+	line-height: 15px;
+}
+.left398column {
+	width: 398px;
+}
+
+
+/**************************/
+/* Copyright Pages */
+/**************************/
+
+table.copyright {
+	border: 0;
+	cellpadding: 5px;
+	margin-bottom: 0;
+	margin-left: 0;
+	margin-top: 0;
+	margin-right: 20px;
+}
+
+table.copyright dl {
+	font-family: verdana, arial, helvetica, sans-serif;
+	line-height:1.5em;
+	color:#333333;
+}
+
+
+/**************************/
+/* Sortable Tables Design */
+/**************************/
+
+
+table.tablesorter {
+	font-family:arial;
+	background-color: #CDCDCD;
+	margin:10px 0pt 15px;
+	font-size: 9pt;
+	width: 98%;
+	text-align: left;
+}
+table.tablesorter thead tr th, table.tablesorter tfoot tr th {
+	background-color: #57797b;
+	border: 1px solid #FFF;
+	font-size: 8pt;
+	padding: 4px;
+	color: white;
+}
+table.tablesorter thead tr .header {
+	background-image: url(../images/bg.gif);
+	background-repeat: no-repeat;
+	background-position: center right;
+	cursor: pointer;
+}
+table.tablesorter tbody td {
+	color: #3D3D3D;
+	padding: 3px;
+	background-color: #FFF;
+	vertical-align: top;
+}
+table.tablesorter tbody tr.odd td {
+	background-color:#F0F0F6;
+}
+table.tablesorter thead tr .headerSortUp {
+	background-image: url(../images/asc.gif);
+}
+table.tablesorter thead tr .headerSortDown {
+	background-image: url(../images/desc.gif);
+}
+table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
+background-color: #b18e5f;
+}
+
